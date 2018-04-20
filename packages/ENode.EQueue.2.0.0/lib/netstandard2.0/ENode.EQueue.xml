@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENode.EQueue</name>
+    </assembly>
+    <members>
+        <member name="T:ENode.EQueue.DomainEventHandledMessage">
+            <summary>Represents a message contains the information of the handled domain event.
+            </summary>
+        </member>
+        <member name="P:ENode.EQueue.DomainEventHandledMessage.CommandId">
+            <summary>Represents the unique identifier of the command.
+            </summary>
+        </member>
+        <member name="P:ENode.EQueue.DomainEventHandledMessage.AggregateRootId">
+            <summary>Represents the aggregate root created or modified by the command.
+            </summary>
+        </member>
+        <member name="P:ENode.EQueue.DomainEventHandledMessage.CommandResult">
+            <summary>Represents the command result data.
+            </summary>
+        </member>
+        <member name="T:ENode.EQueue.ITopicProvider`1">
+            <summary>Represents a topic provider interface.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ENode.EQueue.ITopicProvider`1.GetTopic(`0)">
+            <summary>Gets the topic by the given source object.
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.EQueue.ITopicProvider`1.GetAllTopics">
+            <summary>Gets all the topics.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

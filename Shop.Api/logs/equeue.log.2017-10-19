@@ -1,0 +1,40 @@
+2017-10-19 09:11:47,019  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 09:11:47,019  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 09:11:47,020  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-19 09:54:55,503  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 09:54:55,503  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 09:54:55,504  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-19 10:28:32,086  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 10:28:32,087  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 10:28:32,087  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-19 10:45:47,065 ERROR EQueue.Clients.Producers.Producer - Broker is unavailable for queue [[BrokerName=ShopBroker, Topic=ShopCommandTopic, QueueId=1]]
+2017-10-19 10:45:47,066 ERROR EQueue.Clients.Producers.Producer - Broker is unavailable for queue [ShopCommandTopic], retryTimes: 1
+2017-10-19 10:45:47,066 ERROR EQueue.Clients.Producers.Producer - Broker is unavailable for queue [ShopCommandTopic], retryTimes: 2
+2017-10-19 10:45:47,066 ERROR EQueue.Clients.Producers.Producer - Broker is unavailable for queue [ShopCommandTopic], retryTimes: 3
+2017-10-19 10:45:47,066 ERROR EQueue.Clients.Producers.Producer - Broker is unavailable for queue [ShopCommandTopic], retryTimes: 4
+2017-10-19 10:45:47,067 ERROR EQueue.Clients.Producers.Producer - Broker is unavailable for queue [ShopCommandTopic], retryTimes: 5
+2017-10-19 10:50:41,148  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 10:50:41,148  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 10:50:41,148  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-19 11:01:17,946  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 11:01:17,946  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 11:01:17,946  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-19 11:08:54,051  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 11:08:54,051  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 11:08:54,051  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-19 16:00:05,390  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 16:00:05,390  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 16:00:05,391  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-19 16:03:12,228  INFO EQueue.Clients.ClientService - Removed broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 16:03:12,233  INFO EQueue.Clients.ClientService - Topic routeInfo changed, topic: ShopCommandTopic, newRouteInfo: [], oldRouteInfo: [{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":0},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":1},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":2},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":3}]
+2017-10-19 16:03:12,393 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic]
+2017-10-19 16:03:12,393 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 1
+2017-10-19 16:03:12,393 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 2
+2017-10-19 16:03:12,393 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 3
+2017-10-19 16:03:12,393 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 4
+2017-10-19 16:03:12,393 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 5
+2017-10-19 16:03:17,245  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 16:03:17,246  INFO EQueue.Clients.ClientService - Topic routeInfo changed, topic: ShopCommandTopic, newRouteInfo: [{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":0},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":1},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":2},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":3}], oldRouteInfo: []
+2017-10-19 17:41:19,838  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-10-19 17:41:19,838  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-19 17:41:19,838  INFO EQueue.Clients.Producers.Producer - Producer startted.

@@ -1,0 +1,1237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENode</name>
+    </assembly>
+    <members>
+        <member name="M:ENode.Commanding.CommandExecuteTimeoutException.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.CommandExecuteTimeoutException.#ctor(System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ENode.Commanding.CommandExecuteTimeoutException.#ctor(System.String,System.Exception)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ENode.Commanding.CommandExecuteTimeoutException.#ctor(System.String,System.Object[])">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="messageFormat"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:ENode.Commanding.ICommandAsyncHandler">
+            <summary>Represents an async handler for command.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.ICommandAsyncHandler.CheckCommandHandledFirst">
+            <summary>Indicates that if framework should check the command has already been handled before handling command.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.ICommandAsyncHandler`1">
+            <summary>Represents an generic async handler for command.
+            </summary>
+            <typeparam name="TCommand"></typeparam>
+        </member>
+        <member name="M:ENode.Commanding.ICommandAsyncHandler`1.HandleAsync(`0)">
+            <summary>Handle the given command async.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="T:ENode.Commanding.ICommandAsyncHandlerProvider">
+            <summary>Represents a provider to provide the aggregate command handlers.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandAsyncHandlerProvider.GetHandlers(System.Type)">
+            <summary>Get all the async handlers for the given command type.
+            </summary>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Commanding.Command">
+            <summary>Represents an abstract command.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.Command.AggregateRootId">
+            <summary>Represents the associated aggregate root id.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.Command.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.Command.#ctor(System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="aggregateRootId"></param>
+        </member>
+        <member name="M:ENode.Commanding.Command.GetRoutingKey">
+            <summary>Returns the aggregate root id by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Commanding.Command`1">
+            <summary>Represents an abstract command with generic aggregate root id.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.Command`1.AggregateRootId">
+            <summary>Represents the associated aggregate root id.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.Command`1.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.Command`1.#ctor(`0)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="aggregateRootId"></param>
+        </member>
+        <member name="M:ENode.Commanding.Command`1.GetRoutingKey">
+            <summary>Returns the aggregate root id by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Commanding.AggregateRootAlreadyExistException">
+            <summary>Represents an exception when tring to add a duplicated aggregate root into the command context.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.AggregateRootAlreadyExistException.#ctor(System.Object,System.Type)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.CommandReturnType">
+            <summary>A enum defines the command result return type.
+            </summary>
+        </member>
+        <member name="F:ENode.Commanding.CommandReturnType.CommandExecuted">
+            <summary>Return the command result when the command execution has the following cases:
+            1. the command execution meets some error or exception;
+            2. the command execution makes nothing changes of domain;
+            3. the command execution success, and the domain event is sent to the message queue successfully.
+            </summary>
+        </member>
+        <member name="F:ENode.Commanding.CommandReturnType.EventHandled">
+            <summary>Return the command result when the command execution has the following cases:
+            1. the command execution meets some error or exception;
+            2. the command execution makes nothing changes of domain;
+            3. the command execution success, and the domain event is handled.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.HandledCommand">
+            <summary>Represents a handled command which contains the command and the source info of the command.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.HandledCommand.CommandId">
+            <summary>The command id.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.HandledCommand.AggregateRootId">
+            <summary>The aggregate root id.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.HandledCommand.Message">
+            <summary>The result application message after the command is handled.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.HandledCommand.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.HandledCommand.#ctor(System.String,System.String,ENode.Infrastructure.IApplicationMessage)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="commandId"></param>
+            <param name="aggregateRootId"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:ENode.Commanding.HandledCommand.ToString">
+            <summary>Overrides to return the handled command's useful information.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Commanding.Impl.SqlServerCommandStore.#ctor(ENode.Configurations.OptionSetting)">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.ICommandHandler`1">
+            <summary>Represents generic command handler.
+            </summary>
+            <typeparam name="TCommand"></typeparam>
+        </member>
+        <member name="M:ENode.Commanding.ICommandHandler`1.Handle(ENode.Commanding.ICommandContext,`0)">
+            <summary>Handle the given aggregate command.
+            </summary>
+            <param name="context"></param>
+            <param name="command"></param>
+        </member>
+        <member name="T:ENode.Commanding.ICommand">
+            <summary>Represents a command.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.ICommand.AggregateRootId">
+            <summary>Represents the associated aggregate root string id.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.ICommandAsyncHandlerProxy">
+            <summary>Represents an async handler proxy for command.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandAsyncHandlerProxy.HandleAsync(ENode.Commanding.ICommand)">
+            <summary>Handle the given application command async.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="T:ENode.Commanding.ICommandRoutingKeyProvider">
+            <summary>A provider which can return a routing key for the given command.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandRoutingKeyProvider.GetRoutingKey(ENode.Commanding.ICommand)">
+            <summary>Returns a routing key for the given command.
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Commanding.ICommandStore">
+            <summary>Represents a command store to store all the command async handle records.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandStore.AddAsync(ENode.Commanding.HandledCommand)">
+            <summary>Add the given handled command to the command store async.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandStore.GetAsync(System.String)">
+            <summary>Get a handled command by commandId async.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.ICommandHandlerProvider">
+            <summary>Represents a provider to provide the command handlers.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandHandlerProvider.GetHandlers(System.Type)">
+            <summary>Get all the handlers for the given command type.
+            </summary>
+            <param name="commandType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Commanding.CommandResult">
+            <summary>Represents a command result.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.CommandResult.Status">
+            <summary>Represents the result status of the command.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.CommandResult.CommandId">
+            <summary>Represents the unique identifier of the command.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.CommandResult.AggregateRootId">
+            <summary>Represents the aggregate root id associated with the command.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.CommandResult.Result">
+            <summary>Represents the command result data.
+            </summary>
+        </member>
+        <member name="P:ENode.Commanding.CommandResult.ResultType">
+            <summary>Represents the command result data type.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.CommandResult.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.CommandResult.#ctor(ENode.Commanding.CommandStatus,System.String,System.String,System.String,System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.CommandResult.ToString">
+            <summary>Overrides to return the command result info.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Commanding.CommandStatus">
+            <summary>Represents the command result status enum.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.ICommandExecuteContext">
+            <summary>Represents a context environment for command executor executing command.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandExecuteContext.OnCommandExecuted(ENode.Commanding.CommandResult)">
+            <summary>Notify the given command is executed.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.ICommandProcessor">
+            <summary>Represents a processor to process command.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandProcessor.Process(ENode.Commanding.ProcessingCommand)">
+            <summary>Process the given command.
+            </summary>
+            <param name="processingCommand"></param>
+        </member>
+        <member name="T:ENode.Commanding.ITrackingContext">
+            <summary>Represents a tracking context for tracking the changed aggregate roots for the aggregate command handler.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ITrackingContext.GetTrackedAggregateRoots">
+            <summary>Get all the tracked aggregates.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Commanding.ITrackingContext.Clear">
+            <summary>Clear the tracking context.
+            </summary>
+        </member>
+        <member name="T:ENode.Commanding.ICommandService">
+            <summary>Represents a command service.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandService.SendAsync(ENode.Commanding.ICommand)">
+            <summary>Send a command asynchronously.
+            </summary>
+            <param name="command">The command to send.</param>
+            <returns>A task which contains the send result of the command.</returns>
+        </member>
+        <member name="M:ENode.Commanding.ICommandService.Send(ENode.Commanding.ICommand)">
+            <summary>Send a command synchronously.
+            </summary>
+            <param name="command">The command to send.</param>
+        </member>
+        <member name="M:ENode.Commanding.ICommandService.Execute(ENode.Commanding.ICommand,System.Int32)">
+            <summary>Execute a command synchronously with the default command return type.
+            </summary>
+            <param name="command"></param>
+            <param name="timeoutMillis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Commanding.ICommandService.Execute(ENode.Commanding.ICommand,ENode.Commanding.CommandReturnType,System.Int32)">
+            <summary>Execute a command synchronously with the specified command return type.
+            </summary>
+            <param name="command"></param>
+            <param name="commandReturnType"></param>
+            <param name="timeoutMillis"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Commanding.ICommandService.ExecuteAsync(ENode.Commanding.ICommand)">
+            <summary>Execute a command asynchronously with the default command return type.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <returns>A task which contains the result of the command.</returns>
+        </member>
+        <member name="M:ENode.Commanding.ICommandService.ExecuteAsync(ENode.Commanding.ICommand,ENode.Commanding.CommandReturnType)">
+            <summary>Execute a command asynchronously with the specified command return type.
+            </summary>
+            <param name="command">The command to execute.</param>
+            <param name="commandReturnType">The return type of the command.</param>
+            <returns>A task which contains the result of the command.</returns>
+        </member>
+        <member name="T:ENode.Commanding.ICommandHandlerProxy">
+            <summary>Represents a command handler proxy.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandHandlerProxy.Handle(ENode.Commanding.ICommandContext,ENode.Commanding.ICommand)">
+            <summary>Handle the given command.
+            </summary>
+            <param name="context"></param>
+            <param name="command"></param>
+        </member>
+        <member name="T:ENode.Commanding.ICommandContext">
+            <summary>Represents a command context for aggregate command handler handling command.
+            </summary>
+        </member>
+        <member name="M:ENode.Commanding.ICommandContext.Add(ENode.Domain.IAggregateRoot)">
+            <summary>Add a new aggregate into the current command context.
+            </summary>
+            <param name="aggregateRoot"></param>
+        </member>
+        <member name="M:ENode.Commanding.ICommandContext.Get``1(System.Object,System.Boolean)">
+            <summary>Get an aggregate from the current command context.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="id"></param>
+            <param name="firstFromCache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Commanding.ICommandContext.SetResult(System.String)">
+            <summary>Set the command handle result.
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:ENode.Commanding.ICommandContext.GetResult">
+            <summary>Get the command handle result.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Configurations.ENodeConfiguration">
+            <summary>Configuration class for enode framework.
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.ENodeConfiguration.Setting">
+            <summary>Get the current setting information.
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.ENodeConfiguration.Instance">
+            <summary>Provides the singleton access instance.
+            </summary>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.#ctor(ECommon.Configurations.Configuration,ENode.Configurations.ConfigurationSetting)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.CreateENode(ECommon.Configurations.Configuration,ENode.Configurations.ConfigurationSetting)">
+            <summary>Create the enode configuration instance.
+            </summary>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.GetCommonConfiguration">
+            <summary>Get the ecommon configuration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.RegisterENodeComponents">
+            <summary>Register all the default components of enode framework.
+            </summary>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.RegisterBusinessComponents(System.Reflection.Assembly[])">
+            <summary>Register all the business components from the given assemblies.
+            </summary>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.UseSnapshotOnlyAggregateStorage">
+            <summary>Use the SnapshotOnlyAggregateStorage as the IAggregateStorage.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.UseSqlServerLockService(ENode.Configurations.OptionSetting)">
+            <summary>Use the SqlServerLockService as the ILockService.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.UseSqlServerCommandStore(ENode.Configurations.OptionSetting)">
+            <summary>Use the SqlServerCommandStore as the ICommandStore.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.UseSqlServerEventStore(ENode.Configurations.OptionSetting)">
+            <summary>Use the SqlServerEventStore as the IEventStore.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.UseSqlServerPublishedVersionStore(ENode.Configurations.OptionSetting)">
+            <summary>Use the SqlServerPublishedVersionStore as the IPublishedVersionStore.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Configurations.ENodeConfiguration.InitializeBusinessAssemblies(System.Reflection.Assembly[])">
+            <summary>Initialize all the assembly initializers with the given business assemblies.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ENode.Configurations.ConfigurationSetting.DomainEventStreamMessageHandlerName">
+            <summary>处理领域事件的处理器的名字；默认为DefaultEventProcessor
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.ConfigurationSetting.DefaultDBConfigurationSetting">
+            <summary>默认的数据库配置信息
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.ConfigurationSetting.ScanExpiredAggregateIntervalMilliseconds">
+            <summary>当使用默认的从内存清理聚合根的服务时，该属性用于配置扫描过期的聚合根的时间间隔，默认为5秒；
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.ConfigurationSetting.AggregateRootMaxInactiveSeconds">
+            <summary>当使用默认的MemoryCache时，该属性用于配置聚合根的最长允许的不活跃时间，超过这个时间就认为是过期，就可以从内存清除了；然后下次如果再需要用的时候再重新加载进来；默认为3天；
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.ConfigurationSetting.EventMailBoxPersistenceMaxBatchSize">
+            <summary>EventMailBox中的事件持久化时一次最多持久化多少个事件，默认为1000个
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.ConnectionString">
+            <summary>数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.CommandTableName">
+            <summary>命令表的默认名称；默认为：Command
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.EventTableName">
+            <summary>事件表的默认名称；默认为：EventStream
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.EventTableCount">
+            <summary>事件表的默认个数，用于支持最简易的单库分表；默认为：1，即不分表
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.EventTableBulkCopyBatchSize">
+            <summary>事件表批量持久化单批最大事件数；默认为：1000
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.EventTableBulkCopyTimeout">
+            <summary>事件表批量持久化单批超时时间；单位为秒，默认为：60s
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.PublishedVersionTableName">
+            <summary>聚合根已发布事件表的默认名称；默认为：PublishedVersion
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.LockKeyTableName">
+            <summary>LockKey表的默认名称；默认为：LockKey
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.CommandTableCommandIdUniqueIndexName">
+            <summary>Command表的CommandId的唯一索引的默认名称；默认为：IX_Command_CommandId
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.EventTableVersionUniqueIndexName">
+            <summary>事件表的聚合根版本唯一索引的默认名称；默认为：IX_EventStream_AggId_Version
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.EventTableCommandIdUniqueIndexName">
+            <summary>事件表的聚合根已处理命令唯一索引的默认名称；默认为：IX_EventStream_AggId_CommandId
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.PublishedVersionUniqueIndexName">
+            <summary>聚合根已发布事件表的聚合根已发布版本唯一索引的默认名称；默认为：IX_PublishedVersion_AggId_Version
+            </summary>
+        </member>
+        <member name="P:ENode.Configurations.DefaultDBConfigurationSetting.LockKeyPrimaryKeyName">
+            <summary>LockKey表的默认主键的名称；默认为：PK_LockKey
+            </summary>
+        </member>
+        <member name="T:ENode.Domain.AggregateRoot`1">
+            <summary>Represents an abstract base aggregate root.
+            </summary>
+            <typeparam name="TAggregateRootId"></typeparam>
+        </member>
+        <member name="P:ENode.Domain.AggregateRoot`1.Id">
+            <summary>Gets or sets the unique identifier of the aggregate root.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.AggregateRoot`1.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.AggregateRoot`1.#ctor(`0)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.AggregateRoot`1.#ctor(`0,System.Int32)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.AggregateRoot`1.ActAs``1">
+            <summary>Act the current aggregate as the given type of role.
+            <remarks>
+            Rhe current aggregate must implement the role interface, otherwise this method will throw exception.
+            </remarks>
+            </summary>
+            <typeparam name="TRole">The role interface type.</typeparam>
+            <returns>Returns the role instance which is acted by the current aggregate.</returns>
+        </member>
+        <member name="M:ENode.Domain.AggregateRoot`1.ApplyEvent(ENode.Eventing.IDomainEvent{`0})">
+            <summary>Apply a domain event to the current aggregate root.
+            <remarks>
+            ENode will first call the corresponding Handle method of the current aggregate to apply the changes of the current event,
+            then append the current domain event into the current aggregate's internal queues.
+            After the whole command handler is completed, ENode will pop all the events from the aggregate,
+            and then persist the event to event store, and at last publish it to the query side.
+            </remarks>
+            </summary>
+            <param name="domainEvent"></param>
+        </member>
+        <member name="M:ENode.Domain.AggregateRoot`1.ApplyEvents(ENode.Eventing.IDomainEvent{`0}[])">
+            <summary>Apply multiple domain events to the current aggregate root.
+            </summary>
+            <param name="domainEvent"></param>
+        </member>
+        <member name="T:ENode.Domain.IAggregateRoot">
+            <summary>Represents an aggregate root.
+            </summary>
+        </member>
+        <member name="P:ENode.Domain.IAggregateRoot.UniqueId">
+            <summary>Represents the unique id of the aggregate root.
+            </summary>
+        </member>
+        <member name="P:ENode.Domain.IAggregateRoot.Version">
+            <summary>Represents the current version of the aggregate root.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IAggregateRoot.GetChanges">
+            <summary>Get all the changes of the aggregate root.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Domain.IAggregateRoot.AcceptChanges(System.Int32)">
+            <summary>Accept changes with new version.
+            </summary>
+            <param name="newVersion"></param>
+        </member>
+        <member name="M:ENode.Domain.IAggregateRoot.ReplayEvents(System.Collections.Generic.IEnumerable{ENode.Eventing.DomainEventStream})">
+            <summary>Replay the given event streams.
+            </summary>
+            <param name="eventStreams"></param>
+        </member>
+        <member name="T:ENode.Domain.IAggregateRepository`1">
+            <summary>Represents an aggregate repository.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IAggregateRepository`1.Get(System.String)">
+            <summary>Get aggregate by id.
+            </summary>
+        </member>
+        <member name="T:ENode.Domain.IAggregateStorage">
+            <summary>Represents an aggregate storage interface.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IAggregateStorage.Get(System.Type,System.String)">
+            <summary>Get an aggregate from aggregate storage.
+            </summary>
+            <param name="aggregateRootType"></param>
+            <param name="aggregateRootId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Domain.IAggregateRepositoryProvider">
+            <summary>Represents a provider to provide the aggregate repository.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IAggregateRepositoryProvider.GetRepository(System.Type)">
+            <summary>Get the aggregateRepository for the given aggregate type.
+            </summary>
+            <param name="aggregateRootType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Domain.ICleanAggregateService">
+            <summary>A service to clean aggregates from memory by strategy.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.ICleanAggregateService.Clean">
+            <summary>Clean in-memory aggregates, remove aggregates by strategy.
+            </summary>
+        </member>
+        <member name="T:ENode.Domain.IRepository">
+            <summary>Represents a repository of the building block of Eric Evans's DDD.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IRepository.Get``1(System.Object)">
+            <summary>Get an aggregate from memory cache, if not exist, get it from event store.
+            </summary>
+            <param name="aggregateRootId"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Domain.IRepository.Get(System.Type,System.Object)">
+            <summary>Get an aggregate from memory cache, if not exist, get it from event store.
+            </summary>
+            <param name="aggregateRootType"></param>
+            <param name="aggregateRootId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Domain.IAggregateRootFactory">
+            <summary>Defines a factory to create empty aggregate root.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IAggregateRootFactory.CreateAggregateRoot(System.Type)">
+            <summary>Create an empty aggregate root with the given type.
+            </summary>
+        </member>
+        <member name="T:ENode.Domain.IAggregateRootInternalHandlerProvider">
+            <summary>Defines a provider interface to provide the aggregate root internal handler.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IAggregateRootInternalHandlerProvider.GetInternalEventHandler(System.Type,System.Type)">
+            <summary>Get the internal event handler within the aggregate.
+            </summary>
+        </member>
+        <member name="T:ENode.Domain.IMemoryCache">
+            <summary>Represents a high speed memory cache to get or set aggregate.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IMemoryCache.Get(System.Object,System.Type)">
+            <summary>Get an aggregate from memory cache.
+            </summary>
+            <param name="aggregateRootId"></param>
+            <param name="aggregateRootType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Domain.IMemoryCache.Get``1(System.Object)">
+            <summary>Get a strong type aggregate from memory cache.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="aggregateRootId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Domain.IMemoryCache.Set(ENode.Domain.IAggregateRoot)">
+            <summary>Set an aggregate to memory cache.
+            </summary>
+            <param name="aggregateRoot"></param>
+        </member>
+        <member name="M:ENode.Domain.IMemoryCache.RefreshAggregateFromEventStore(System.String,System.String)">
+            <summary>Refresh the aggregate memory cache by replaying events of event store.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IMemoryCache.Remove(System.Object)">
+            <summary>Remove an aggregate from memory.
+            </summary>
+            <param name="aggregateRootId"></param>
+        </member>
+        <member name="M:ENode.Domain.IMemoryCache.GetAll">
+            <summary>Get all the aggregates from memory cache.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Domain.ValueObject`1">
+            <summary>A DDD value object base class. Provide the mechanism to compare two objects by values.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.ValueObject`1.GetAtomicValues">
+            <summary>Returns all the atomic values of the current object.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.ValueObject`1.Clone(System.Object)">
+            <summary>Clone a new object from the current object with the specified default values.
+            </summary>
+            <param name="objectContainsNewValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Domain.ValueObject`1.op_Equality(ENode.Domain.ValueObject{`0},ENode.Domain.ValueObject{`0})">
+            <summary>Operator overrides.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.ValueObject`1.op_Inequality(ENode.Domain.ValueObject{`0},ENode.Domain.ValueObject{`0})">
+            <summary>Operator overrides.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.ValueObject`1.Equals(System.Object)">
+            <summary>Method overrides.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.ValueObject`1.GetHashCode">
+            <summary>Method overrides.
+            </summary>
+        </member>
+        <member name="T:ENode.Domain.IAggregateSnapshotter">
+            <summary>An interface which can restore aggregate from snapshot storage.
+            </summary>
+        </member>
+        <member name="M:ENode.Domain.IAggregateSnapshotter.RestoreFromSnapshot(System.Type,System.String)">
+            <summary>Restore the aggregate from snapshot storage.
+            </summary>
+        </member>
+        <member name="T:ENode.EQueue.DomainEventHandledMessage">
+            <summary>Represents a message contains the information of the handled domain event.
+            </summary>
+        </member>
+        <member name="P:ENode.EQueue.DomainEventHandledMessage.CommandId">
+            <summary>Represents the unique identifier of the command.
+            </summary>
+        </member>
+        <member name="P:ENode.EQueue.DomainEventHandledMessage.AggregateRootId">
+            <summary>Represents the aggregate root created or modified by the command.
+            </summary>
+        </member>
+        <member name="P:ENode.EQueue.DomainEventHandledMessage.CommandResult">
+            <summary>Represents the command result data.
+            </summary>
+        </member>
+        <member name="T:ENode.EQueue.ITopicProvider`1">
+            <summary>Represents a topic provider interface.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ENode.EQueue.ITopicProvider`1.GetTopic(`0)">
+            <summary>Gets the topic by the given source object.
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.EQueue.ITopicProvider`1.GetAllTopics">
+            <summary>Gets all the topics.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Eventing.IEventSerializer">
+            <summary>Represents an event.
+            </summary>
+        </member>
+        <member name="M:ENode.Eventing.IEventSerializer.Serialize(System.Collections.Generic.IEnumerable{ENode.Eventing.IDomainEvent})">
+            <summary>Serialize the given events to dictionary.
+            </summary>
+            <param name="evnts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Eventing.IEventSerializer.Deserialize``1(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>Deserialize the given data to events.
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Eventing.IEventService">
+            <summary>Represents a service to commit or publish domain event stream.
+            </summary>
+        </member>
+        <member name="M:ENode.Eventing.IEventService.SetProcessingCommandHandler(ENode.Commanding.IProcessingCommandHandler)">
+            <summary>Set the command executor for command retring.
+            </summary>
+            <param name="processingCommandHandler"></param>
+        </member>
+        <member name="M:ENode.Eventing.IEventService.CommitDomainEventAsync(ENode.Eventing.EventCommittingContext)">
+            <summary>Commit the given aggregate's domain events to the eventstore async and publish the domain events.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ENode.Eventing.IEventService.PublishDomainEventAsync(ENode.Commanding.ProcessingCommand,ENode.Eventing.DomainEventStream)">
+            <summary>Publish the given domain event stream async.
+            </summary>
+            <param name="processingCommand"></param>
+            <param name="eventStream"></param>
+        </member>
+        <member name="T:ENode.Eventing.IDomainEvent">
+            <summary>Represents a domain event.
+            </summary>
+        </member>
+        <member name="T:ENode.Eventing.IDomainEvent`1">
+            <summary>Represents a domain event with generic type of aggregate root id.
+            </summary>
+        </member>
+        <member name="T:ENode.Eventing.IEventStore">
+            <summary>Represents a event store to store event commit records of aggregate.
+            </summary>
+        </member>
+        <member name="P:ENode.Eventing.IEventStore.SupportBatchAppendEvent">
+            <summary>This property indicate whether the event store support batch append events.
+            </summary>
+        </member>
+        <member name="M:ENode.Eventing.IEventStore.QueryAggregateEvents(System.String,System.String,System.Int32,System.Int32)">
+            <summary>Query a range of event streams of a single aggregate from event store.
+            </summary>
+        </member>
+        <member name="M:ENode.Eventing.IEventStore.BatchAppendAsync(System.Collections.Generic.IEnumerable{ENode.Eventing.DomainEventStream})">
+            <summary>Batch append the given event streams to the event store async.
+            </summary>
+        </member>
+        <member name="M:ENode.Eventing.IEventStore.AppendAsync(ENode.Eventing.DomainEventStream)">
+            <summary>Append the given event stream to the event store async.
+            </summary>
+        </member>
+        <member name="M:ENode.Eventing.IEventStore.FindAsync(System.String,System.Int32)">
+            <summary>Find a single event stream by aggregateRootId and version async.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Eventing.IEventStore.FindAsync(System.String,System.String)">
+            <summary>Find a single event stream by aggregateRootId and commandId async.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Eventing.IEventStore.QueryAggregateEventsAsync(System.String,System.String,System.Int32,System.Int32)">
+            <summary>Query a range of event streams of a single aggregate from event store async.
+            </summary>
+        </member>
+        <member name="T:ENode.Eventing.DomainEvent`1">
+            <summary>Represents an abstract generic domain event.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.ITypeNameProvider">
+            <summary>Represents a provider to provide the type and type name mapping information.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.ITypeNameProvider.GetTypeName(System.Type)">
+            <summary>Get the type name of the given type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Infrastructure.ITypeNameProvider.GetType(System.String)">
+            <summary>Get the type of the given type name.
+            </summary>
+            <param name="typeName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.IObjectProxy">
+            <summary>Represents a handler proxy.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IObjectProxy.GetInnerObject">
+            <summary>Get the inner object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.ApplicationMessage">
+            <summary>Represents an abstract application message.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.PriorityAttribute">
+            <summary>An attribute to specify the priority of message handler.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.PriorityAttribute.Priority">
+            <summary>The priority value.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.PriorityAttribute.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.PriorityAttribute.#ctor(System.Int32)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="priority"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IApplicationMessage">
+            <summary>Represents an application message.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.IPublishableException">
+            <summary>Represents an exception which can be published.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IPublishableException.SerializeTo(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>Serialize the current exception info to the given dictionary.
+            </summary>
+            <param name="serializableInfo"></param>
+        </member>
+        <member name="M:ENode.Infrastructure.IPublishableException.RestoreFrom(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>Restore the current exception from the given dictionary.
+            </summary>
+            <param name="serializableInfo"></param>
+        </member>
+        <member name="M:ENode.Infrastructure.PublishableException.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.PublishableException.GetRoutingKey">
+            <summary>Returns null by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Infrastructure.PublishableException.GetTypeName">
+            <summary>Returns the full type name of the current exception.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandler">
+            <summary>Represents a message handler.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandler`1">
+            <summary>Represents a message handler.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageHandler`1.HandleAsync(`0)">
+            <summary>Handle the given message async.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandler`2">
+            <summary>Represents a message handler.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageHandler`2.HandleAsync(`0,`1)">
+            <summary>Handle the given messages async.
+            </summary>
+            <param name="message1"></param>
+            <param name="message2"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandler`3">
+            <summary>Represents a message handler.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageHandler`3.HandleAsync(`0,`1,`2)">
+            <summary>Handle the given messages async.
+            </summary>
+            <param name="message1"></param>
+            <param name="message2"></param>
+            <param name="message3"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.SequenceMessage`1">
+            <summary>Represents an abstract sequence message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.SequenceMessage`1.AggregateRootId">
+            <summary>Represents the aggregate root id.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.SequenceMessage`1.AggregateRootStringId">
+            <summary>Represents the aggregate root string id.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.SequenceMessage`1.AggregateRootTypeName">
+            <summary>Represents the aggregte root type name.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.SequenceMessage`1.Version">
+            <summary>Represents the version.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.SequenceMessage`1.GetRoutingKey">
+            <summary>Returns the aggregate root id by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageDispatcher">
+            <summary>Represents a message dispatcher.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageDispatcher.DispatchMessageAsync(ENode.Infrastructure.IMessage)">
+            <summary>Dispatch the given message async.
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageDispatcher.DispatchMessagesAsync(System.Collections.Generic.IEnumerable{ENode.Infrastructure.IMessage})">
+            <summary>Dispatch the given messages async.
+            </summary>
+            <param name="messages"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandlerProvider">
+            <summary>Represents a provider to provide the message handlers.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageHandlerProvider.GetHandlers(System.Type)">
+            <summary>Get all the handlers for the given message type.
+            </summary>
+            <param name="messageType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.ITwoMessageHandlerProvider">
+            <summary>Represents a provider to provide the handlers which handle two messages.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.ITwoMessageHandlerProvider.GetHandlers(System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>Get all the handlers for the given message types.
+            </summary>
+            <param name="messageTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.IThreeMessageHandlerProvider">
+            <summary>Represents a provider to provide the handlers which handle three messages.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IThreeMessageHandlerProvider.GetHandlers(System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>Get all the handlers for the given message types.
+            </summary>
+            <param name="messageTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandlerProxy1">
+            <summary>Represents a message handler proxy.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageHandlerProxy1.HandleAsync(ENode.Infrastructure.IMessage)">
+            <summary>Handle the given message async.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandlerProxy2">
+            <summary>Represents a message handler proxy.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageHandlerProxy2.HandleAsync(ENode.Infrastructure.IMessage,ENode.Infrastructure.IMessage)">
+            <summary>Handle the given messages async.
+            </summary>
+            <param name="message1"></param>
+            <param name="message2"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageHandlerProxy3">
+            <summary>Represents a message handler proxy.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageHandlerProxy3.HandleAsync(ENode.Infrastructure.IMessage,ENode.Infrastructure.IMessage,ENode.Infrastructure.IMessage)">
+            <summary>Handle the given messages async.
+            </summary>
+            <param name="message1"></param>
+            <param name="message2"></param>
+            <param name="message3"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageProcessContext">
+            <summary>Represents the message processing context.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageProcessContext.NotifyMessageProcessed">
+            <summary>Notify the message has been processed.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessageProcessor`3">
+            <summary>Represents a message processor.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessageProcessor`3.Process(`0)">
+            <summary>Process the given message.
+            </summary>
+            <param name="processingMessage"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessagePublisher`1">
+            <summary>Represents a message publisher.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessagePublisher`1.PublishAsync(`0)">
+            <summary>Publish the given message to all the subscribers async.
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.ILockService">
+            <summary>定义一个用于实现锁的接口
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.ILockService.AddLockKey(System.String)">
+            <summary>Add a lock key.
+            </summary>
+            <param name="lockKey"></param>
+        </member>
+        <member name="M:ENode.Infrastructure.ILockService.ExecuteInLock(System.String,System.Action)">
+            <summary>Execute the given action with the given lock key.
+            </summary>
+            <param name="lockKey"></param>
+            <param name="action"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.ConcurrentException">
+            <summary>Represents a concurrent exception.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.ConcurrentException.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.ConcurrentException.#ctor(System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ENode.Infrastructure.ConcurrentException.#ctor(System.String,System.Exception)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ENode.Infrastructure.ConcurrentException.#ctor(System.String,System.Object[])">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ENode.Infrastructure.ConcurrentException.#ctor(System.String,System.Exception,System.Object[])">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:ENode.Infrastructure.IPublishedVersionStore">
+            <summary>Represents a storage to store the aggregate published version of aggregate.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IPublishedVersionStore.UpdatePublishedVersionAsync(System.String,System.String,System.String,System.Int32)">
+            <summary>Update the published version for the given aggregate.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IPublishedVersionStore.GetPublishedVersionAsync(System.String,System.String,System.String)">
+            <summary>Get the current published version for the given aggregate.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.IAssemblyInitializer">
+            <summary>Represents a initializer which can initialize from the given assemblies.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IAssemblyInitializer.Initialize(System.Reflection.Assembly[])">
+            <summary>Initialize from the given assemblies.
+            </summary>
+            <param name="assemblies">The assemblies.</param>
+        </member>
+        <member name="T:ENode.Infrastructure.TypeUtils">
+            <summary>A utility class provides type related methods.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.TypeUtils.IsComponent(System.Type)">
+            <summary>Check whether a type is a component type.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.TypeUtils.IsAggregateRoot(System.Type)">
+            <summary>Check whether a type is an aggregate root type.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.Message">
+            <summary>Represents an abstract message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.Message.Id">
+            <summary>Represents the identifier of the message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.Message.Timestamp">
+            <summary>Represents the timestamp of the message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.Message.Sequence">
+            <summary>Represents the sequence of the message which is belongs to the message stream.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.Message.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.Message.GetRoutingKey">
+            <summary>Returns null by default.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Infrastructure.Message.GetTypeName">
+            <summary>Returns the full type name of the current message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ENode.Infrastructure.ISequenceMessage">
+            <summary>Represents a message has sequence.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.ISequenceMessage.AggregateRootStringId">
+            <summary>Represents the aggregate root string id of the sequence message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.ISequenceMessage.AggregateRootTypeName">
+            <summary>Represents the aggregate root type name of the sequence message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.ISequenceMessage.Version">
+            <summary>Represents the main version of the sequence message.
+            </summary>
+        </member>
+        <member name="T:ENode.Infrastructure.IMessage">
+            <summary>Represents a message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.IMessage.Id">
+            <summary>Represents the unique identifier of the message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.IMessage.Timestamp">
+            <summary>Represents the timestamp of the message.
+            </summary>
+        </member>
+        <member name="P:ENode.Infrastructure.IMessage.Sequence">
+            <summary>Represents the sequence of the message which is belongs to the message stream.
+            </summary>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessage.GetRoutingKey">
+            <summary>Represents the routing key of the message.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.Infrastructure.IMessage.GetTypeName">
+            <summary>Represents the type name of the message.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

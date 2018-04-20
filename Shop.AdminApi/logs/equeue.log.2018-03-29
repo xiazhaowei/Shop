@@ -1,0 +1,3 @@
+2018-03-29 11:57:54,755  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=127.0.0.1:11101,ConsumerAddress=127.0.0.1:11102,AdminAddress=127.0.0.1:11103]
+2018-03-29 11:57:54,755  INFO EQueue.Clients.ClientService - ClientService startted.
+2018-03-29 11:57:54,755  INFO EQueue.Clients.Producers.Producer - Producer startted.

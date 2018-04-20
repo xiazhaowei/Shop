@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<system.web>
+		<sessionState customProvider="Memcached" mode="Custom">
+			<providers>
+				<add name="Memcached" type="Enyim.Caching.Web.MembaseSessionStateProvider, Enyim.Caching.Web" />
+			</providers>
+		</sessionState>
+	</system.web>
+</configuration>

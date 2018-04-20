@@ -1,0 +1,49 @@
+2018-01-10 09:22:59,196  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-10 09:22:59,287  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:6945
+2018-01-10 09:22:59,894  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:6946
+2018-01-10 09:22:59,895  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:6947
+2018-01-10 09:29:23,254  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-10 09:29:23,316  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:7065
+2018-01-10 09:29:23,794  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:7066
+2018-01-10 09:29:23,795  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:7067
+2018-01-10 10:33:57,496  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:9609
+2018-01-10 10:33:57,620  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:9610
+2018-01-10 11:22:00,472  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-10 11:22:01,529 ERROR ECommon.Socketing.ClientSocket - Socket connect failed, remoting server endpoint:192.168.1.142:11100, socketError:ConnectionRefused
+2018-01-10 11:22:02,543  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.142:11100
+2018-01-10 11:22:03,559 ERROR ECommon.Socketing.ClientSocket - Socket connect failed, remoting server endpoint:192.168.1.142:11100, socketError:ConnectionRefused
+2018-01-10 11:22:04,559  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.142:11100
+2018-01-10 11:22:05,567 ERROR ECommon.Socketing.ClientSocket - Socket connect failed, remoting server endpoint:192.168.1.142:11100, socketError:ConnectionRefused
+2018-01-10 11:22:06,569  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.142:11100
+2018-01-10 11:22:07,571 ERROR ECommon.Socketing.ClientSocket - Socket connect failed, remoting server endpoint:192.168.1.142:11100, socketError:ConnectionRefused
+2018-01-10 11:22:08,579  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.142:11100
+2018-01-10 11:22:09,581 ERROR ECommon.Socketing.ClientSocket - Socket connect failed, remoting server endpoint:192.168.1.142:11100, socketError:ConnectionRefused
+2018-01-10 11:22:10,582  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.142:11100
+2018-01-10 11:22:11,585 ERROR ECommon.Socketing.ClientSocket - Socket connect failed, remoting server endpoint:192.168.1.142:11100, socketError:ConnectionRefused
+2018-01-10 11:26:01,839  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-10 11:26:01,893  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:14619
+2018-01-10 11:26:02,391  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:14616
+2018-01-10 11:26:02,525  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:14622
+2018-01-10 11:26:02,527  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:14623
+2018-01-10 11:36:44,796  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-10 11:36:44,868  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:15689
+2018-01-10 11:36:45,443  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:15690
+2018-01-10 11:36:45,443  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:15691
+2018-01-10 11:43:01,887  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:11101, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-10 11:43:01,889  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:11103, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-10 11:49:49,424  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-10 11:49:49,547  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:16910
+2018-01-10 11:49:50,276  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:16911
+2018-01-10 11:49:50,277  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:16912
+2018-01-10 11:55:52,914  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-10 11:55:53,114  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:17158
+2018-01-10 11:55:54,665  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:17159
+2018-01-10 11:55:54,667  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:17160
+2018-01-10 11:56:55,375  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:17264
+2018-01-10 11:56:56,960  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:17269
+2018-01-10 14:14:29,709  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:11101, socketError:Success, reason:Socket normal close, ex:
+2018-01-10 14:14:30,182  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:11103, socketError:Success, reason:Socket normal close., ex:
+2018-01-10 14:14:39,691  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:20539
+2018-01-10 14:14:39,691  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:20540
+2018-01-10 18:10:21,970  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:17269, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-10 18:10:21,980  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:17264, socketError:ConnectionReset, reason:Socket receive error, ex:

@@ -1,0 +1,5 @@
+2017-09-20 09:42:28,812  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-09-20 11:22:38,942  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-09-20 14:02:34,720  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-09-20 14:03:35,664  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018e5d2b0000dfb3080000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:124, Tag:Shop.Commands.Wallets.BankCards.AddBankCardCommand, CreatedTime:2017/9/20 14:03:35, StoredTime:2017/9/20 14:03:35],ErrorMessage:], routingKey: 6626f898-37e7-4c0a-aa61-8bb1c5a564ce
+2017-09-20 15:08:08,318  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002

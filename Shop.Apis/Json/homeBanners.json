@@ -1,0 +1,16 @@
+﻿{
+  "Banners": [
+    {
+      "Img": "http://wftx-goods-img-details.oss-cn-shanghai.aliyuncs.com/banner/20171011133555.jpg",
+      "Link": "GoodsBlock:6cb0c823-2a52-48a0-a022-015f4129e4cc"
+    },
+    {
+      "Img": "http://wftx-goods-img-details.oss-cn-shanghai.aliyuncs.com/banner/homebanner2.png",
+      "Link": "GoodsBlock:1dea7cd5-6bc5-45d6-8b1e-015f76dcba01"
+    },
+    {
+      "Img": "http://wftx-goods-img-details.oss-cn-shanghai.aliyuncs.com/banner/20171011133604.jpg",
+      "Link": "GoodsBlock:da3a2c2c-e5a0-4eb6-b6c6-015f78a54649"
+    }
+  ]
+}

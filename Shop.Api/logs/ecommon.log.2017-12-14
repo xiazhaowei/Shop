@@ -1,0 +1,18 @@
+2017-12-14 09:13:24,352  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-12-14 09:13:24,399  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:2043
+2017-12-14 09:13:24,977  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:2044
+2017-12-14 09:13:24,995  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:2045
+2017-12-14 09:21:12,115  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:2300
+2017-12-14 09:21:12,355  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:2301
+2017-12-14 10:09:40,031  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-12-14 10:09:40,081  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:4813
+2017-12-14 10:09:40,600  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:4817
+2017-12-14 10:09:40,601  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:4818
+2017-12-14 10:18:45,377  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:5153
+2017-12-14 10:18:45,757  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:5154
+2017-12-14 10:46:17,920  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-12-14 10:46:17,971  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:5750
+2017-12-14 10:46:18,488  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:5751
+2017-12-14 10:46:18,490  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:5752
+2017-12-14 10:47:02,611  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:5784
+2017-12-14 10:47:03,186  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:5785

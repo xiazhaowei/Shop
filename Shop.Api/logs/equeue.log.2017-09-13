@@ -1,0 +1,26 @@
+2017-09-13 09:04:52,491  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-09-13 09:04:52,491  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-09-13 09:04:52,491  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-09-13 12:27:59,824  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-09-13 12:27:59,824  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-09-13 12:27:59,825  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-09-13 12:30:39,193  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-09-13 12:30:39,193  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-09-13 12:30:39,194  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-09-13 13:56:46,469  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-09-13 13:56:46,469  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-09-13 13:56:46,469  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-09-13 13:58:59,180  INFO EQueue.Clients.ClientService - Topic routeInfo changed, topic: ShopCommandTopic, newRouteInfo: [], oldRouteInfo: [{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":0},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":1},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":2},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":3}]
+2017-09-13 13:59:05,528 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic]
+2017-09-13 13:59:05,528 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 1
+2017-09-13 13:59:05,528 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 2
+2017-09-13 13:59:05,528 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 3
+2017-09-13 13:59:05,528 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 4
+2017-09-13 13:59:05,528 ERROR EQueue.Clients.Producers.Producer - No available message queue for topic [ShopCommandTopic], retryTimes: 5
+2017-09-13 13:59:05,678  INFO EQueue.Clients.ClientService - Topic routeInfo changed, topic: ShopCommandTopic, newRouteInfo: [{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":0},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":1},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":2},{"BrokerName":"ShopBroker","Topic":"ShopCommandTopic","QueueId":3}], oldRouteInfo: []
+2017-09-13 14:02:29,372  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-09-13 14:02:29,372  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-09-13 14:02:29,373  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-09-13 14:17:36,792  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.142:11101,ConsumerAddress=192.168.1.142:11102,AdminAddress=192.168.1.142:11103]
+2017-09-13 14:17:36,793  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-09-13 14:17:36,793  INFO EQueue.Clients.Producers.Producer - Producer startted.

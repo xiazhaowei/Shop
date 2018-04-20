@@ -1,0 +1,7 @@
+2017-10-15 18:19:24,514  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.103:9002
+2017-10-15 18:52:41,255  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.103:9002
+2017-10-15 19:04:32,632  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.103:9002
+2017-10-15 21:26:10,594  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a800675d2b0000693c100000000000, Code:1, Topic:ShopCommandTopic, QueueId:3, QueueOffset:164, Tag:Shop.Commands.Carts.RemoveCartGoodsCommand, CreatedTime:2017/10/15 21:26:10, StoredTime:2017/10/15 21:26:10],ErrorMessage:], routingKey: 296efcf9-f53d-4c8c-bc7f-5badd18c0bc7
+2017-10-15 22:01:06,119  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.103:9002
+2017-10-15 22:41:43,529  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.103:9002
+2017-10-15 22:46:22,250  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.103:9002

@@ -1,0 +1,45 @@
+2017-08-24 00:08:55,092  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.5:9002.
+2017-08-24 00:08:55,286 ERROR ECommon.Socketing.ServerSocket - Failed to listen on TCP endpoint: 192.168.1.5:9002.
+System.Net.Sockets.SocketException (0x80004005): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 ECommon.Socketing.ServerSocket.Start() 位置 D:\MyProjects\ecommon\src\ECommon\Socketing\ServerSocket.cs:行号 57
+2017-08-24 00:17:54,230  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.5:9002.
+2017-08-24 00:17:54,293  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.5:11100, local endpoint:192.168.1.5:2233
+2017-08-24 00:17:54,531  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.5:2234
+2017-08-24 00:17:54,871  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.5:11101, local endpoint:192.168.1.5:2237
+2017-08-24 00:17:54,872  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.5:11103, local endpoint:192.168.1.5:2238
+2017-08-24 00:23:24,954  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.5:11101 socketError:Success, reason:Socket normal close., ex:
+2017-08-24 00:23:24,978  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.5:11103 socketError:Success, reason:Socket normal close., ex:
+2017-08-24 00:23:29,984  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.5:11101, local endpoint:192.168.1.5:3002
+2017-08-24 00:23:29,985  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.5:11103, local endpoint:192.168.1.5:3003
+2017-08-24 00:24:43,204  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.5:3146
+2017-08-24 09:09:00,103  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-08-24 09:09:00,116 ERROR ECommon.Socketing.ServerSocket - Failed to listen on TCP endpoint: 192.168.1.142:9002.
+System.Net.Sockets.SocketException (0x80004005): 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 ECommon.Socketing.ServerSocket.Start() 位置 D:\MyProjects\ecommon\src\ECommon\Socketing\ServerSocket.cs:行号 57
+2017-08-24 09:17:46,973  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-08-24 09:17:47,070  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:2164
+2017-08-24 09:17:47,667  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:2170
+2017-08-24 09:17:47,668  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:2171
+2017-08-24 09:29:55,036  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:3978
+2017-08-24 09:29:55,245  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:3981
+2017-08-24 17:10:50,788  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-08-24 17:10:50,865  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:21898
+2017-08-24 17:10:51,332  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:21899
+2017-08-24 17:10:51,334  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:21900
+2017-08-24 17:11:06,188  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:21925
+2017-08-24 17:11:06,614  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:21926
+2017-08-24 17:19:47,578  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-08-24 17:19:47,632  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:22775
+2017-08-24 17:19:48,077  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:22776
+2017-08-24 17:19:48,078  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:22777
+2017-08-24 17:49:20,239  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9002.
+2017-08-24 17:49:20,312  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:25477
+2017-08-24 17:49:21,094  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:25478
+2017-08-24 17:49:21,095  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:25479
+2017-08-24 17:50:05,751  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:25560
+2017-08-24 17:50:06,176  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:25561
+2017-08-24 17:55:57,623  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:11100 socketError:ConnectionReset, reason:Socket receive error, ex:

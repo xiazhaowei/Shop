@@ -1,0 +1,50 @@
+2017-12-26 09:36:46,386  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2017-12-26 09:36:46,599  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:3931
+2017-12-26 09:36:46,637  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:3929
+2017-12-26 09:36:46,830  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:3930
+2017-12-26 09:36:47,518  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:3932
+2017-12-26 09:36:47,842  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:3935
+2017-12-26 09:36:47,843  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:3936
+2017-12-26 09:44:38,687  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:4525
+2017-12-26 09:44:39,066  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:4526
+2017-12-26 09:54:06,712  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2017-12-26 09:54:06,904  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:5759
+2017-12-26 09:54:07,190  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:5757
+2017-12-26 09:54:07,190  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:5756
+2017-12-26 09:54:07,191  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:5762
+2017-12-26 09:54:07,921  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:5763
+2017-12-26 09:54:07,922  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:5764
+2017-12-26 09:55:41,112  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:6025
+2017-12-26 10:02:19,277  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7012
+2017-12-26 10:07:42,548  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2017-12-26 10:07:42,761  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:7752
+2017-12-26 10:07:42,821  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7754
+2017-12-26 10:07:42,821  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7753
+2017-12-26 10:07:42,821  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7746
+2017-12-26 10:07:43,008  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7747
+2017-12-26 10:07:43,009  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7755
+2017-12-26 10:07:43,208  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7756
+2017-12-26 10:07:43,211  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7757
+2017-12-26 10:07:44,029  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:7762
+2017-12-26 10:07:44,030  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:7763
+2017-12-26 10:10:39,528  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:8173
+2017-12-26 10:15:35,798  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2017-12-26 10:15:36,143  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:8748
+2017-12-26 10:15:37,914  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:8752
+2017-12-26 10:15:37,915  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:8753
+2017-12-26 10:17:54,266  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:8912
+2017-12-26 10:17:56,023  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:8913
+2017-12-26 10:23:04,570  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11101, socketError:Success, reason:Socket normal close., ex:
+2017-12-26 10:23:04,574  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11103, socketError:Success, reason:Socket normal close., ex:
+2017-12-26 10:23:09,623  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:9119
+2017-12-26 10:23:09,624  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:9120
+2017-12-26 10:24:12,487 ERROR ECommon.Scheduling.ScheduleService - Task has exception, name: RefreshBrokerAndTopicRouteInfo, due: 1000, period: 5000
+System.Exception: Get cluster brokers from name server failed, clusterName: DefaultCluster, nameServerAddress: 127.0.0.1:11100, remoting response code: 0, errorMessage: Remoting request timeout.
+   at EQueue.Clients.ClientService.GetClusterBrokerList() in D:\MyProjects\equeue\src\EQueue\Clients\ClientService.cs:line 200
+   at EQueue.Clients.ClientService.RefreshClusterBrokers() in D:\MyProjects\equeue\src\EQueue\Clients\ClientService.cs:line 229
+   at EQueue.Clients.ClientService.<Start>b__17_0() in D:\MyProjects\equeue\src\EQueue\Clients\ClientService.cs:line 98
+   at ECommon.Scheduling.ScheduleService.TaskCallback(Object obj) in D:\MyProjects\ecommon\src\ECommon\Scheduling\ScheduleService.cs:line 55
+2017-12-26 20:59:28,112  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2017-12-26 20:59:28,278  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:2464
+2017-12-26 20:59:28,998  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:2465
+2017-12-26 20:59:28,999  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:2466

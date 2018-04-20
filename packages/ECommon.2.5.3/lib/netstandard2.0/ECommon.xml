@@ -1,0 +1,1128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommon</name>
+    </assembly>
+    <members>
+        <member name="T:ECommon.Components.ComponentAttribute">
+            <summary>An attribute to indicate a class is a component.
+            </summary>
+        </member>
+        <member name="P:ECommon.Components.ComponentAttribute.LifeStyle">
+            <summary>The lifetime of the component.
+            </summary>
+        </member>
+        <member name="M:ECommon.Components.ComponentAttribute.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ECommon.Components.ComponentAttribute.#ctor(ECommon.Components.LifeStyle)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="lifeStyle"></param>
+        </member>
+        <member name="T:ECommon.Components.LifeStyle">
+            <summary>An enum to description the lifetime of a component.
+            </summary>
+        </member>
+        <member name="F:ECommon.Components.LifeStyle.Transient">
+            <summary>Represents a component is a transient component.
+            </summary>
+        </member>
+        <member name="F:ECommon.Components.LifeStyle.Singleton">
+            <summary>Represents a component is a singleton component.
+            </summary>
+        </member>
+        <member name="T:ECommon.Components.IObjectContainer">
+            <summary>Represents an object container interface.
+            </summary>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.Build">
+            <summary>Build the container.
+            </summary>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.RegisterType(System.Type,System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementation type.
+            </summary>
+            <param name="implementationType">The implementation type.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.RegisterType(System.Type,System.Type,System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementer type as a service implementation.
+            </summary>
+            <param name="serviceType">The service type.</param>
+            <param name="implementationType">The implementation type.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.Register``2(System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementer type as a service implementation.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <typeparam name="TImplementer">The implementer type.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.RegisterInstance``2(``1,System.String)">
+            <summary>Register a implementer type instance as a service implementation.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <typeparam name="TImplementer">The implementer type.</typeparam>
+            <param name="instance">The implementer type instance.</param>
+            <param name="serviceName">The service name.</param>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.Resolve``1">
+            <summary>Resolve a service.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.Resolve(System.Type)">
+            <summary>Resolve a service.
+            </summary>
+            <param name="serviceType">The service type.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.TryResolve``1(``0@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <typeparam name="TService">The service type to resolve.</typeparam>
+            <param name="instance">The resulting component instance providing the service, or default(TService).</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.TryResolve(System.Type,System.Object@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <param name="serviceType">The service type to resolve.</param>
+            <param name="instance">The resulting component instance providing the service, or null.</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.ResolveNamed``1(System.String)">
+            <summary>Resolve a service.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.ResolveNamed(System.String,System.Type)">
+            <summary>Resolve a service.
+            </summary>
+            <param name="serviceName">The service name.</param>
+            <param name="serviceType">The service type.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.IObjectContainer.TryResolveNamed(System.String,System.Type,System.Object@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <param name="serviceName">The name of the service to resolve.</param>
+            <param name="serviceType">The type of the service to resolve.</param>
+            <param name="instance">The resulting component instance providing the service, or null.</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="T:ECommon.Components.ObjectContainer">
+            <summary>Represents an object container.
+            </summary>
+        </member>
+        <member name="P:ECommon.Components.ObjectContainer.Current">
+            <summary>Represents the current object container.
+            </summary>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.SetContainer(ECommon.Components.IObjectContainer)">
+            <summary>Set the object container.
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.Build">
+            <summary>Build the container.
+            </summary>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.RegisterType(System.Type,System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementation type.
+            </summary>
+            <param name="implementationType">The implementation type.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.RegisterType(System.Type,System.Type,System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementer type as a service implementation.
+            </summary>
+            <param name="serviceType">The implementation type.</param>
+            <param name="implementationType">The implementation type.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.Register``2(System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementer type as a service implementation.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <typeparam name="TImplementer">The implementer type.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.RegisterInstance``2(``1,System.String)">
+            <summary>Register a implementer type instance as a service implementation.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <typeparam name="TImplementer">The implementer type.</typeparam>
+            <param name="instance">The implementer type instance.</param>
+            <param name="serviceName">The service name.</param>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.Resolve``1">
+            <summary>Resolve a service.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.Resolve(System.Type)">
+            <summary>Resolve a service.
+            </summary>
+            <param name="serviceType">The service type.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.TryResolve``1(``0@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <typeparam name="TService">The service type to resolve.</typeparam>
+            <param name="instance">The resulting component instance providing the service, or default(TService).</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.TryResolve(System.Type,System.Object@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <param name="serviceType">The service type to resolve.</param>
+            <param name="instance">The resulting component instance providing the service, or null.</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.ResolveNamed``1(System.String)">
+            <summary>Resolve a service.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.ResolveNamed(System.String,System.Type)">
+            <summary>Resolve a service.
+            </summary>
+            <param name="serviceName">The service name.</param>
+            <param name="serviceType">The service type.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Components.ObjectContainer.TryResolveNamed(System.String,System.Type,System.Object@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <param name="serviceName">The name of the service to resolve.</param>
+            <param name="serviceType">The type of the service to resolve.</param>
+            <param name="instance">The resulting component instance providing the service, or null.</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="P:ECommon.Configurations.Configuration.Instance">
+            <summary>Provides the singleton access instance.
+            </summary>
+        </member>
+        <member name="T:ECommon.Extensions.ReaderWriterLockSlimExtensions">
+            <summary>An extension class to provide utility lock mechanism.
+            </summary>
+        </member>
+        <member name="M:ECommon.Extensions.ReaderWriterLockSlimExtensions.AtomRead(System.Threading.ReaderWriterLockSlim,System.Action)">
+            <summary>An atom read action wrapper.
+            </summary>
+            <param name="readerWriterLockSlim"></param>
+            <param name="action"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ECommon.Extensions.ReaderWriterLockSlimExtensions.AtomRead``1(System.Threading.ReaderWriterLockSlim,System.Func{``0})">
+            <summary>An atom read func wrapper.
+            </summary>
+            <param name="readerWriterLockSlim"></param>
+            <param name="function"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ECommon.Extensions.ReaderWriterLockSlimExtensions.AtomWrite(System.Threading.ReaderWriterLockSlim,System.Action)">
+            <summary>An atom write action wrapper.
+            </summary>
+            <param name="readerWriterLockSlim"></param>
+            <param name="action"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ECommon.Extensions.ReaderWriterLockSlimExtensions.AtomWrite``1(System.Threading.ReaderWriterLockSlim,System.Func{``0})">
+            <summary>An atom write func wrapper.
+            </summary>
+            <param name="readerWriterLockSlim"></param>
+            <param name="function"></param>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:ECommon.Extensions.StringExtensions.GetStringHashcode(System.String)">
+            <summary>返回平台无关的Hashcode
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.IO.AsyncTaskResult">
+            <summary>Represents an async task result.
+            </summary>
+        </member>
+        <member name="P:ECommon.IO.AsyncTaskResult.Status">
+            <summary>Represents the async task result status.
+            </summary>
+        </member>
+        <member name="P:ECommon.IO.AsyncTaskResult.ErrorMessage">
+            <summary>Represents the error message if the async task is failed.
+            </summary>
+        </member>
+        <member name="M:ECommon.IO.AsyncTaskResult.#ctor(ECommon.IO.AsyncTaskStatus,System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="T:ECommon.IO.AsyncTaskResult`1">
+            <summary>Represents a generic async task result.
+            </summary>
+        </member>
+        <member name="P:ECommon.IO.AsyncTaskResult`1.Data">
+            <summary>Represents the async task result data.
+            </summary>
+        </member>
+        <member name="M:ECommon.IO.AsyncTaskResult`1.#ctor(ECommon.IO.AsyncTaskStatus)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="M:ECommon.IO.AsyncTaskResult`1.#ctor(ECommon.IO.AsyncTaskStatus,`0)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="M:ECommon.IO.AsyncTaskResult`1.#ctor(ECommon.IO.AsyncTaskStatus,System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="M:ECommon.IO.AsyncTaskResult`1.#ctor(ECommon.IO.AsyncTaskStatus,System.String,`0)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="T:ECommon.IO.AsyncTaskStatus">
+            <summary>Represents an async task result status enum.
+            </summary>
+        </member>
+        <member name="T:ECommon.IO.IOException">
+            <summary>Represents an io exception.
+            </summary>
+        </member>
+        <member name="M:ECommon.IO.IOException.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ECommon.IO.IOException.#ctor(System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ECommon.IO.IOException.#ctor(System.String,System.Exception)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+        </member>
+        <member name="M:ECommon.IO.IOException.#ctor(System.String,System.Object[])">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ECommon.IO.IOException.#ctor(System.String,System.Exception,System.Object[])">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:ECommon.IO.IOHelper">
+            <summary>An IO action helper class.
+            </summary>
+        </member>
+        <member name="T:ECommon.Logging.EmptyLogger">
+            <summary>An empty logger which log nothing.
+            </summary>
+        </member>
+        <member name="T:ECommon.Logging.EmptyLoggerFactory">
+            <summary>An empty implementation of ILoggerFactory.
+            </summary>
+        </member>
+        <member name="M:ECommon.Logging.EmptyLoggerFactory.Create(System.String)">
+            <summary>Create an empty logger instance by name.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Logging.EmptyLoggerFactory.Create(System.Type)">
+            <summary>Create an empty logger instance by type.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.Logging.ILogger">
+            <summary>Represents a logger interface.
+            </summary>
+        </member>
+        <member name="P:ECommon.Logging.ILogger.IsDebugEnabled">
+            <summary>Represents whether the debug log level is enabled.
+            </summary>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Debug(System.Object)">
+            <summary>Write a debug level log message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.DebugFormat(System.String,System.Object[])">
+            <summary>Write a debug level log message.
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Debug(System.Object,System.Exception)">
+            <summary>Write a debug level log message.
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Info(System.Object)">
+            <summary>Write a info level log message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.InfoFormat(System.String,System.Object[])">
+            <summary>Write a info level log message.
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Info(System.Object,System.Exception)">
+            <summary>Write a info level log message.
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Error(System.Object)">
+            <summary>Write an error level log message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.ErrorFormat(System.String,System.Object[])">
+            <summary>Write an error level log message.
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Error(System.Object,System.Exception)">
+            <summary>Write an error level log message.
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Warn(System.Object)">
+            <summary>Write a warnning level log message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.WarnFormat(System.String,System.Object[])">
+            <summary>Write a warnning level log message.
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Warn(System.Object,System.Exception)">
+            <summary>Write a warnning level log message.
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Fatal(System.Object)">
+            <summary>Write a fatal level log message.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.FatalFormat(System.String,System.Object[])">
+            <summary>Write a fatal level log message.
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ECommon.Logging.ILogger.Fatal(System.Object,System.Exception)">
+            <summary>Write a fatal level log message.
+            </summary>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="T:ECommon.Logging.ILoggerFactory">
+            <summary>Represents a logger factory.
+            </summary>
+        </member>
+        <member name="M:ECommon.Logging.ILoggerFactory.Create(System.String)">
+            <summary>Create a logger with the given logger name.
+            </summary>
+        </member>
+        <member name="M:ECommon.Logging.ILoggerFactory.Create(System.Type)">
+            <summary>Create a logger with the given type.
+            </summary>
+        </member>
+        <member name="F:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler._currentThreadIsProcessingItems">
+            <summary>Whether the current thread is processing work items.</summary>
+        </member>
+        <member name="F:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler._tasks">
+            <summary>The list of tasks to be executed.</summary>
+        </member>
+        <member name="F:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler._maxDegreeOfParallelism">
+            <summary>The maximum concurrency level allowed by this scheduler.</summary>
+        </member>
+        <member name="F:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler._delegatesQueuedOrRunning">
+            <summary>Whether the scheduler is currently processing work items.</summary>
+        </member>
+        <member name="M:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler.#ctor(System.Int32)">
+            <summary>
+            Initializes an instance of the LimitedConcurrencyLevelTaskScheduler class with the
+            specified degree of parallelism.
+            </summary>
+            <param name="maxDegreeOfParallelism">The maximum degree of parallelism provided by this scheduler.</param>
+        </member>
+        <member name="M:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler.QueueTask(System.Threading.Tasks.Task)">
+            <summary>Queues a task to the scheduler.</summary>
+            <param name="task">The task to be queued.</param>
+        </member>
+        <member name="M:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler.NotifyThreadPoolOfPendingWork">
+            <summary>
+            Informs the ThreadPool that there's work to be executed for this scheduler.
+            </summary>
+        </member>
+        <member name="M:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler.TryExecuteTaskInline(System.Threading.Tasks.Task,System.Boolean)">
+            <summary>Attempts to execute the specified task on the current thread.</summary>
+            <param name="task">The task to be executed.</param>
+            <param name="taskWasPreviouslyQueued"></param>
+            <returns>Whether the task could be executed on the current thread.</returns>
+        </member>
+        <member name="M:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler.TryDequeue(System.Threading.Tasks.Task)">
+            <summary>Attempts to remove a previously scheduled task from the scheduler.</summary>
+            <param name="task">The task to be removed.</param>
+            <returns>Whether the task could be found and removed.</returns>
+        </member>
+        <member name="P:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler.MaximumConcurrencyLevel">
+            <summary>Gets the maximum concurrency level supported by this scheduler.</summary>
+        </member>
+        <member name="M:ECommon.Scheduling.LimitedConcurrencyLevelTaskScheduler.GetScheduledTasks">
+            <summary>Gets an enumerable of the tasks currently scheduled on this scheduler.</summary>
+            <returns>An enumerable of the tasks currently scheduled.</returns>
+        </member>
+        <member name="T:ECommon.Scheduling.Worker">
+            <summary>Represent a background worker that will repeatedly execute a specific method.
+            </summary>
+        </member>
+        <member name="P:ECommon.Scheduling.Worker.ActionName">
+            <summary>Returns the action name of the current worker.
+            </summary>
+        </member>
+        <member name="M:ECommon.Scheduling.Worker.#ctor(System.String,System.Action)">
+            <summary>Initialize a new worker with the specified action.
+            </summary>
+            <param name="actionName">The action name.</param>
+            <param name="action">The action to run by the worker.</param>
+        </member>
+        <member name="M:ECommon.Scheduling.Worker.Start">
+            <summary>Start the worker if it is not running.
+            </summary>
+        </member>
+        <member name="M:ECommon.Scheduling.Worker.Stop">
+            <summary>Request to stop the worker.
+            </summary>
+        </member>
+        <member name="T:ECommon.Serializing.DefaultBinarySerializer">
+            <summary>Defines a serializer to serialize object to byte array.
+            </summary>
+        </member>
+        <member name="M:ECommon.Serializing.DefaultBinarySerializer.Serialize(System.Object)">
+            <summary>Serialize an object to byte array.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Serializing.DefaultBinarySerializer.Deserialize(System.Byte[],System.Type)">
+            <summary>Deserialize an object from a byte array.
+            </summary>
+            <param name="data"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Serializing.DefaultBinarySerializer.Deserialize``1(System.Byte[])">
+            <summary>Deserialize a typed object from a byte array.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.Socketing.BufferManagement.IntelliPool`1">
+            <summary>
+            Intelligent object pool
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPool`1.#ctor(System.Int32,ECommon.Socketing.BufferManagement.IPoolItemCreator{`0},System.Action{`0},System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ECommon.Socketing.BufferManagement.IntelliPool`1"/> class.
+            </summary>
+            <param name="initialCount">The initial count.</param>
+            <param name="itemCreator">The item creator.</param>
+            <param name="itemCleaner">The item cleaner.</param>
+            <param name="itemPreGet">The item pre get.</param>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPool`1.RegisterNewItem(`0)">
+            <summary>
+            Registers the new item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPool`1.Shrink">
+            <summary>
+            Shrinks this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPool`1.CanReturn(`0)">
+            <summary>
+            Determines whether the specified item can be returned.
+            </summary>
+            <param name="item">The item to be returned.</param>
+            <returns>
+              <c>true</c> if the specified item can be returned; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPool`1.TryRemove(`0)">
+            <summary>
+            Tries to remove the specific item
+            </summary>
+            <param name="item">The specific item to be removed.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.Socketing.BufferManagement.IntelliPoolBase`1">
+            <summary>
+            Intelligent pool base class
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.CurrentGeneration">
+            <summary>
+            Gets the current generation.
+            </summary>
+            <value>
+            The current generation.
+            </value>
+        </member>
+        <member name="P:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.TotalCount">
+            <summary>
+            Gets the total count.
+            </summary>
+            <value>
+            The total count.
+            </value>
+        </member>
+        <member name="P:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.AvailableCount">
+            <summary>
+            Gets the available count, the items count which are available to be used.
+            </summary>
+            <value>
+            The available count.
+            </value>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.#ctor(System.Int32,ECommon.Socketing.BufferManagement.IPoolItemCreator{`0},System.Action{`0},System.Action{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ECommon.Socketing.BufferManagement.IntelliPoolBase`1"/> class.
+            </summary>
+            <param name="initialCount">The initial count.</param>
+            <param name="itemCreator">The item creator.</param>
+            <param name="itemCleaner">The item cleaner.</param>
+            <param name="itemPreGet">The item pre get.</param>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.RegisterNewItem(`0)">
+            <summary>
+            Registers the new item.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.Get">
+            <summary>
+            Gets an item from the pool.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.Shrink">
+            <summary>
+            Shrinks this pool.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.CanReturn(`0)">
+            <summary>
+            Determines whether the specified item can be returned.
+            </summary>
+            <param name="item">The item.</param>
+            <returns>
+              <c>true</c> if the specified item can be returned; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.TryRemove(`0)">
+            <summary>
+            Tries to remove the specific item
+            </summary>
+            <param name="item">The specific item to be removed.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IntelliPoolBase`1.Return(`0)">
+            <summary>
+            Returns the specified item to the pool.
+            </summary>
+            <param name="item">The item to be returned.</param>
+        </member>
+        <member name="T:ECommon.Socketing.BufferManagement.IPool">
+            <summary>
+            The basic pool interface
+            </summary>
+        </member>
+        <member name="P:ECommon.Socketing.BufferManagement.IPool.TotalCount">
+            <summary>
+            Gets the total count.
+            </summary>
+            <value>
+            The total count.
+            </value>
+        </member>
+        <member name="P:ECommon.Socketing.BufferManagement.IPool.AvailableCount">
+            <summary>
+            Gets the available count, the items count which are available to be used.
+            </summary>
+            <value>
+            The available count.
+            </value>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IPool.Shrink">
+            <summary>
+            Shrinks this pool.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.Socketing.BufferManagement.IPool`1">
+            <summary>
+            The basic pool interface for the object in type of T
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IPool`1.Get">
+            <summary>
+            Gets one item from the pool.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IPool`1.Return(`0)">
+            <summary>
+            Returns the specified item to the pool.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="T:ECommon.Socketing.BufferManagement.IPoolItemCreator`1">
+            <summary>
+            The pool item creator interface
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ECommon.Socketing.BufferManagement.IPoolItemCreator`1.Create(System.Int32)">
+            <summary>
+            Creates the items of the specified count.
+            </summary>
+            <param name="count">The count.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Socketing.Framing.LengthPrefixMessageFramer.Parse(System.ArraySegment{System.Byte})">
+            <summary>
+            Parses a stream chunking based on length-prefixed framing. 
+            Calls are re-entrant and hold state internally. Once full message arrives,
+            callback is raised (it is registered via <see cref="M:ECommon.Socketing.Framing.LengthPrefixMessageFramer.RegisterMessageArrivedCallback(System.Action{System.ArraySegment{System.Byte}})"/>
+            </summary>
+            <param name="bytes">A byte array of data to append</param>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.BasePath">
+            <summary>Chunk文件存储的根目录；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.FileNamingStrategy">
+            <summary>Chunk文件命名规则策略；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkDataSize">
+            <summary>Chunk文件大小，字节为单位，适用于文件内记录大小不固定的场景，如果是固定大小，则设置为0；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkDataUnitSize">
+            <summary>Chunk文件单条数据大小，字节为单位，适用于每条数据固定大小的场景；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkDataCount">
+            <summary>Chunk文件总数据数，适用于每个数据固定大小的场景；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.FlushChunkIntervalMilliseconds">
+            <summary>Chunk文件刷磁盘的间隔，毫秒为单位；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.SyncFlush">
+            <summary>表示是否同步刷盘；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.FlushOption">
+            <summary>刷盘方式，是直接将数据刷入磁盘还是先刷入OS；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.EnableCache">
+            <summary>表示是否缓存Chunk，缓存Chunk可以提高消费速度；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkReaderCount">
+            <summary>Chunk文件的BinaryReader的个数；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.MaxLogRecordSize">
+            <summary>Chunk文件允许最大的记录的大小，字节为单位；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkWriteBuffer">
+            <summary>Chunk写入时的缓冲大小，字节为单位；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkReadBuffer">
+            <summary>Chunk读取时的缓冲大小，字节为单位；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkCacheMaxCount">
+            <summary>Chunk可以缓存的个数上限，超过上限则不会自动缓存新创建的Chunk文件；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkCacheMinCount">
+            <summary>Chunk可以缓存的个数下限；低于下限则不需要进行Chunk文件的非托管内存释放处理；高于下限，则开始进行Chunk文件的非托管内存释放处理；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.PreCacheChunkCount">
+            <summary>应用启动时，需要预加载到非托管内存的Chunk文件数；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkInactiveTimeMaxSeconds">
+            <summary>Chunk文件非活跃时间，单位为秒；
+            <remarks>
+            在释放已完成的Chunk文件的非托管内存时，会根据这个非活跃时间来判断当前Chunk文件是否允许释放内存；
+            如果某个已完成并已经有对应非托管内存的Chunk文件有超过这个时间都不活跃，则可以进行非托管内存的释放；
+            是否活跃的依据是，只要该Chunk文件有发生读取或写入，就更新活跃时间；
+            释放时，根据非活跃时间的长短作为顺序，总是先把非活跃时间最大的Chunk文件的非托管内存释放。
+            </remarks>
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.ChunkLocalCacheSize">
+            <summary>表示当Chunk文件无法分配非托管内存时，使用本地的环形数组进行缓存最新的记录。此属性指定本地环形数组的大小；
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.ChunkManagerConfig.EnableChunkStatistic">
+            <summary>表示是否需要统计Chunk的写入和读取情况
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.FlushOption.FlushToOS">
+            <summary>将数据刷到操作系统的缓存，性能较高
+            </summary>
+        </member>
+        <member name="F:ECommon.Storage.FlushOption.FlushToDisk">
+            <summary>将数据写到磁盘，性能最低
+            </summary>
+        </member>
+        <member name="T:ECommon.Utilities.ConsoleEventHandlerService">
+            <summary>Service to catch console control events (ie CTRL-C) in C#.
+            </summary>
+        </member>
+        <member name="T:ECommon.Utilities.ConsoleEventHandlerService.ControlEventHandler">
+            <summary>Handler to be called when a console event occurs.
+            </summary>
+        </member>
+        <member name="T:ECommon.Utilities.DelegateFactory">
+            <summary>A dynamic delegate factory.
+            </summary>
+        </member>
+        <member name="M:ECommon.Utilities.DelegateFactory.CreateDelegate``1(System.Reflection.MethodInfo,System.Type[])">
+            <summary>Creates a delegate from the given methodInfo and parameterTypes.
+            </summary>
+            <typeparam name="D"></typeparam>
+            <param name="methodInfo"></param>
+            <param name="parameterTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.Utilities.ObjectId">
+            <summary>Represents an ObjectId
+            </summary>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the ObjectId class.
+            </summary>
+            <param name="bytes">The bytes.</param>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.#ctor(System.DateTime,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            Initializes a new instance of the ObjectId class.
+            </summary>
+            <param name="timestamp">The timestamp (expressed as a DateTime).</param>
+            <param name="machine">The machine hash.</param>
+            <param name="pid">The PID.</param>
+            <param name="increment">The increment.</param>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.#ctor(System.Int32,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            Initializes a new instance of the ObjectId class.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <param name="machine">The machine hash.</param>
+            <param name="pid">The PID.</param>
+            <param name="increment">The increment.</param>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ObjectId class.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="P:ECommon.Utilities.ObjectId.Empty">
+            <summary>
+            Gets an instance of ObjectId where the value is empty.
+            </summary>
+        </member>
+        <member name="P:ECommon.Utilities.ObjectId.Timestamp">
+            <summary>
+            Gets the timestamp.
+            </summary>
+        </member>
+        <member name="P:ECommon.Utilities.ObjectId.Machine">
+            <summary>
+            Gets the machine.
+            </summary>
+        </member>
+        <member name="P:ECommon.Utilities.ObjectId.Pid">
+            <summary>
+            Gets the PID.
+            </summary>
+        </member>
+        <member name="P:ECommon.Utilities.ObjectId.Increment">
+            <summary>
+            Gets the increment.
+            </summary>
+        </member>
+        <member name="P:ECommon.Utilities.ObjectId.CreationTime">
+            <summary>
+            Gets the creation time (derived from the timestamp).
+            </summary>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.op_LessThan(ECommon.Utilities.ObjectId,ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares two ObjectIds.
+            </summary>
+            <param name="lhs">The first ObjectId.</param>
+            <param name="rhs">The other ObjectId</param>
+            <returns>True if the first ObjectId is less than the second ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.op_LessThanOrEqual(ECommon.Utilities.ObjectId,ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares two ObjectIds.
+            </summary>
+            <param name="lhs">The first ObjectId.</param>
+            <param name="rhs">The other ObjectId</param>
+            <returns>True if the first ObjectId is less than or equal to the second ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.op_Equality(ECommon.Utilities.ObjectId,ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares two ObjectIds.
+            </summary>
+            <param name="lhs">The first ObjectId.</param>
+            <param name="rhs">The other ObjectId.</param>
+            <returns>True if the two ObjectIds are equal.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.op_Inequality(ECommon.Utilities.ObjectId,ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares two ObjectIds.
+            </summary>
+            <param name="lhs">The first ObjectId.</param>
+            <param name="rhs">The other ObjectId.</param>
+            <returns>True if the two ObjectIds are not equal.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.op_GreaterThanOrEqual(ECommon.Utilities.ObjectId,ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares two ObjectIds.
+            </summary>
+            <param name="lhs">The first ObjectId.</param>
+            <param name="rhs">The other ObjectId</param>
+            <returns>True if the first ObjectId is greather than or equal to the second ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.op_GreaterThan(ECommon.Utilities.ObjectId,ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares two ObjectIds.
+            </summary>
+            <param name="lhs">The first ObjectId.</param>
+            <param name="rhs">The other ObjectId</param>
+            <returns>True if the first ObjectId is greather than the second ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.GenerateNewId">
+            <summary>
+            Generates a new ObjectId with a unique value.
+            </summary>
+            <returns>An ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.GenerateNewId(System.DateTime)">
+            <summary>
+            Generates a new ObjectId with a unique value (with the timestamp component based on a given DateTime).
+            </summary>
+            <param name="timestamp">The timestamp component (expressed as a DateTime).</param>
+            <returns>An ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.GenerateNewId(System.Int32)">
+            <summary>
+            Generates a new ObjectId with a unique value (with the given timestamp).
+            </summary>
+            <param name="timestamp">The timestamp component.</param>
+            <returns>An ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.GenerateNewStringId">
+            <summary>
+            Generates a new ObjectId string with a unique value.
+            </summary>
+            <returns>The string value of the new generated ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.Pack(System.Int32,System.Int32,System.Int16,System.Int32)">
+            <summary>
+            Packs the components of an ObjectId into a byte array.
+            </summary>
+            <param name="timestamp">The timestamp.</param>
+            <param name="machine">The machine hash.</param>
+            <param name="pid">The PID.</param>
+            <param name="increment">The increment.</param>
+            <returns>A byte array.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.Parse(System.String)">
+            <summary>
+            Parses a string and creates a new ObjectId.
+            </summary>
+            <param name="s">The string value.</param>
+            <returns>A ObjectId.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.Unpack(System.Byte[],System.Int32@,System.Int32@,System.Int16@,System.Int32@)">
+            <summary>
+            Unpacks a byte array into the components of an ObjectId.
+            </summary>
+            <param name="bytes">A byte array.</param>
+            <param name="timestamp">The timestamp.</param>
+            <param name="machine">The machine hash.</param>
+            <param name="pid">The PID.</param>
+            <param name="increment">The increment.</param>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.GetCurrentProcessId">
+            <summary>
+            Gets the current process id.  This method exists because of how CAS operates on the call stack, checking
+            for permissions before executing the method.  Hence, if we inlined this call, the calling method would not execute
+            before throwing an exception requiring the try/catch at an even higher level that we don't necessarily control.
+            </summary>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.CompareTo(ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares this ObjectId to another ObjectId.
+            </summary>
+            <param name="other">The other ObjectId.</param>
+            <returns>A 32-bit signed integer that indicates whether this ObjectId is less than, equal to, or greather than the other.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.Equals(ECommon.Utilities.ObjectId)">
+            <summary>
+            Compares this ObjectId to another ObjectId.
+            </summary>
+            <param name="rhs">The other ObjectId.</param>
+            <returns>True if the two ObjectIds are equal.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.Equals(System.Object)">
+            <summary>
+            Compares this ObjectId to another object.
+            </summary>
+            <param name="obj">The other object.</param>
+            <returns>True if the other object is an ObjectId and equal to this one.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.GetHashCode">
+            <summary>
+            Gets the hash code.
+            </summary>
+            <returns>The hash code.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.ToByteArray">
+            <summary>
+            Converts the ObjectId to a byte array.
+            </summary>
+            <returns>A byte array.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.ToString">
+            <summary>
+            Returns a string representation of the value.
+            </summary>
+            <returns>A string representation of the value.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.ParseHexString(System.String)">
+            <summary>
+            Parses a hex string into its equivalent byte array.
+            </summary>
+            <param name="s">The hex string to parse.</param>
+            <returns>The byte equivalent of the hex string.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.ToHexString(System.Byte[])">
+            <summary>
+            Converts a byte array to a hex string.
+            </summary>
+            <param name="bytes">The byte array.</param>
+            <returns>A hex string.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.ToMillisecondsSinceEpoch(System.DateTime)">
+            <summary>
+            Converts a DateTime to number of milliseconds since Unix epoch.
+            </summary>
+            <param name="dateTime">A DateTime.</param>
+            <returns>Number of seconds since Unix epoch.</returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectId.ToUniversalTime(System.DateTime)">
+            <summary>
+            Converts a DateTime to UTC (with special handling for MinValue and MaxValue).
+            </summary>
+            <param name="dateTime">A DateTime.</param>
+            <returns>The DateTime in UTC.</returns>
+        </member>
+        <member name="T:ECommon.Utilities.ObjectUtils">
+            <summary>A class provides utility methods.
+            </summary>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectUtils.CreateObject``1(System.Object)">
+            <summary>Create an object from the source object, assign the properties by the same name.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Utilities.ObjectUtils.UpdateObject``2(``0,``1,System.Linq.Expressions.Expression{System.Func{``1,System.Object}}[])">
+            <summary>Update the target object by the source object, assign the properties by the same name.
+            </summary>
+            <typeparam name="TTarget"></typeparam>
+            <typeparam name="TSource"></typeparam>
+            <param name="target"></param>
+            <param name="source"></param>
+            <param name="propertyExpressionsFromSource"></param>
+        </member>
+        <member name="T:ECommon.Utilities.TypeUtils">
+            <summary>A class provides utility methods.
+            </summary>
+        </member>
+        <member name="M:ECommon.Utilities.TypeUtils.ConvertType``1(System.Object)">
+            <summary>Convert the given object to a given strong type.
+            </summary>
+        </member>
+    </members>
+</doc>

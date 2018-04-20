@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D96CF52C-0504-45C5-98E3-E1F7C4F864E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shop.Commands</RootNamespace>
+    <AssemblyName>Shop.Commands</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon, Version=2.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.2.5.3\lib\netstandard2.0\ECommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode, Version=2.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ENode.2.8.5\lib\netstandard2.0\ENode.dll</HintPath>
+    </Reference>
+    <Reference Include="EQueue, Version=2.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EQueue.2.5.3\lib\netstandard2.0\EQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admins\CreateAdminCommand.cs" />
+    <Compile Include="Admins\DeleteAdminCommand.cs" />
+    <Compile Include="Admins\NewOperatRecordCommand.cs" />
+    <Compile Include="Admins\UpdateAdminCommand.cs" />
+    <Compile Include="Admins\UpdatePasswordCommand.cs" />
+    <Compile Include="Announcements\CreateAnnouncementCommand.cs" />
+    <Compile Include="Announcements\DeleteAnnouncementCommand.cs" />
+    <Compile Include="Announcements\UpdateAnnouncementCommand.cs" />
+    <Compile Include="BenevolenceIndexs\CreateBenevolenceIndexCommand.cs" />
+    <Compile Include="Carts\AddCartGoodsCommand.cs" />
+    <Compile Include="Carts\CreateCartCommand.cs" />
+    <Compile Include="Carts\RemoveCartGoodsCommand.cs" />
+    <Compile Include="Categorys\DeleteCategoryCommand.cs" />
+    <Compile Include="GoodsBlocks\CreateGoodsBlockWarpCommand.cs" />
+    <Compile Include="GoodsBlocks\DeleteGoodsBlockWarpCommand.cs" />
+    <Compile Include="GoodsBlocks\DeleteGoodsBlockCommand.cs" />
+    <Compile Include="GoodsBlocks\UpdateGoodsBlockWarpCommand.cs" />
+    <Compile Include="GoodsBlocks\UpdateGoodsBlockCommand.cs" />
+    <Compile Include="GoodsBlocks\CreateGoodsBlockCommand.cs" />
+    <Compile Include="Goodses\DeleteGoodsCommand.cs" />
+    <Compile Include="Goodses\Specifications\UpdateSpecificationsCommand.cs" />
+    <Compile Include="Goodses\UpdateGoodsCommand.cs" />
+    <Compile Include="Goodses\UpdateStatusCommand.cs" />
+    <Compile Include="Notifications\CreateNotificationCommand.cs" />
+    <Compile Include="Notifications\DeleteNotificationCommand.cs" />
+    <Compile Include="Notifications\SetNotificationSmsedCommand.cs" />
+    <Compile Include="Notifications\SetNotificationReadedCommand.cs" />
+    <Compile Include="OfflineStores\AcceptNewSaleCommand.cs" />
+    <Compile Include="OfflineStores\DeleteOfflineStoreCommand.cs" />
+    <Compile Include="OfflineStores\ResetTodayStatisticCommand.cs" />
+    <Compile Include="OfflineStores\UpdateOfflineStoreCommand.cs" />
+    <Compile Include="OfflineStores\CreateOfflineStoreCommand.cs" />
+    <Compile Include="Orders\CloseOrderCommand.cs" />
+    <Compile Include="Orders\ConfirmOneReservationCommand.cs" />
+    <Compile Include="Orders\ConfirmPaymentCommand.cs" />
+    <Compile Include="Orders\MarkAsExpiredCommand.cs" />
+    <Compile Include="Orders\MarkAsSuccessCommand.cs" />
+    <Compile Include="Orders\PlaceOrderCommand.cs" />
+    <Compile Include="Orders\SpecificationiInfo.cs" />
+    <Compile Include="Partners\DeletePartnerCommand.cs" />
+    <Compile Include="Partners\UpdatePartnerCommand.cs" />
+    <Compile Include="Payments\CancelPaymentCommand.cs" />
+    <Compile Include="Payments\CompletePaymentCommand.cs" />
+    <Compile Include="Payments\CreatePaymentCommand.cs" />
+    <Compile Include="Payments\PaymentLine.cs" />
+    <Compile Include="PubCategorys\CreatePubCategoryCommand.cs" />
+    <Compile Include="PubCategorys\DeletePubCategoryCommand.cs" />
+    <Compile Include="PubCategorys\UpdatePubCategoryCommand.cs" />
+    <Compile Include="Categorys\UpdateCategoryCommand.cs" />
+    <Compile Include="Categorys\CreateCategoryCommand.cs" />
+    <Compile Include="Comments\CreateCommentCommand.cs" />
+    <Compile Include="Goodses\AcceptNewCommentCommand.cs" />
+    <Compile Include="Goodses\GoodsParamInfo.cs" />
+    <Compile Include="Goodses\Specifications\SpecificationInfo.cs" />
+    <Compile Include="Goodses\Specifications\UpdateSpecificationCommand.cs" />
+    <Compile Include="Goodses\UnpublishGoodsCommand.cs" />
+    <Compile Include="Goodses\PublishGoodsCommand.cs" />
+    <Compile Include="Goodses\StoreUpdateGoodsCommand.cs" />
+    <Compile Include="Goodses\CreateGoodsCommand.cs" />
+    <Compile Include="Goodses\Specifications\AddSpecificationCommand.cs" />
+    <Compile Include="Goodses\Specifications\CancelSpecificationReservationCommand.cs" />
+    <Compile Include="Goodses\Specifications\CommitSpecificationReservationCommand.cs" />
+    <Compile Include="Goodses\Specifications\MakeSpecificationReservationCommand.cs" />
+    <Compile Include="Goodses\Specifications\SpecificationReservationItemInfo.cs" />
+    <Compile Include="Goodses\Specifications\AddSpecificationsCommand.cs" />
+    <Compile Include="Goodses\UpdateParamsCommand.cs" />
+    <Compile Include="Grantees\AcceptMoneyHelpCommand.cs" />
+    <Compile Include="Grantees\AddTestifyCommand.cs" />
+    <Compile Include="Grantees\AddVerificationCommand.cs" />
+    <Compile Include="Grantees\CreateGranteeCommand.cs" />
+    <Compile Include="Grantees\UnVerifyCommand.cs" />
+    <Compile Include="Grantees\VerifyCommand.cs" />
+    <Compile Include="Partners\AcceptNewBalanceCommand.cs" />
+    <Compile Include="Partners\CreatePartnerCommand.cs" />
+    <Compile Include="Stores\AcceptNewStoreOrderCommand.cs" />
+    <Compile Include="Stores\StoreOrders\ReturnDeliverCommand.cs" />
+    <Compile Include="Stores\UpdateReturnAddressCommand.cs" />
+    <Compile Include="Stores\ResetTodayStatisticCommand.cs" />
+    <Compile Include="Stores\StoreOrders\DeleteStoreOrderCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\MarkAsExpireCommand.cs" />
+    <Compile Include="Stores\UpdateSubjectCommand.cs" />
+    <Compile Include="Stores\UpdateStoreCommand.cs" />
+    <Compile Include="Stores\Sections\ChangeSectionNameCommand.cs" />
+    <Compile Include="Stores\CreateStoreCommand.cs" />
+    <Compile Include="Stores\Sections\CreateSectionCommand.cs" />
+    <Compile Include="Stores\SetAccessCodeCommand.cs" />
+    <Compile Include="Stores\StoreOrders\AgreeRefundCommand.cs" />
+    <Compile Include="Stores\StoreOrders\AgreeReturnCommand.cs" />
+    <Compile Include="Stores\StoreOrders\ApplyReturnAndRefundCommand.cs" />
+    <Compile Include="Stores\StoreOrders\ApplyRefundCommand.cs" />
+    <Compile Include="Stores\StoreOrders\ConfirmDeliverCommand.cs" />
+    <Compile Include="Stores\StoreOrders\DeliverCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\ToDoorServiceFinishCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\ServiceFinishCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\DisAgreeRefundCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\AgreeRefundCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\AgreeServiceCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\AddServicesExpressInfoCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\CreateOrderGoodsCommand.cs" />
+    <Compile Include="Stores\StoreOrders\CreateStoreOrderCommand.cs" />
+    <Compile Include="Stores\OrderGoods.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\ServiceApplyInfo.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\ApplyServicesCommand.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\ServiceExpressInfo.cs" />
+    <Compile Include="Stores\StoreOrders\OrderGoodses\ServiceFinishExpressInfo.cs" />
+    <Compile Include="Stores\UpdateStoreStatusCommand.cs" />
+    <Compile Include="Stores\CustomerUpdateStoreCommand.cs" />
+    <Compile Include="ThirdCurrencys\AcceptNewImportCommand.cs" />
+    <Compile Include="ThirdCurrencys\ChargeThirdCurrencyCommand.cs" />
+    <Compile Include="ThirdCurrencys\DeleteThirdCurrencyCommand.cs" />
+    <Compile Include="ThirdCurrencys\UpdateThirdCurrencyCommand.cs" />
+    <Compile Include="ThirdCurrencys\CreateThirdCurrencyCommand.cs" />
+    <Compile Include="Users\AcceptChildBenevolenceCommand.cs" />
+    <Compile Include="Users\AcceptChildGratefulAwardCommand.cs" />
+    <Compile Include="Users\AcceptChildUpdateOrderCommand.cs" />
+    <Compile Include="Users\AcceptMyStoreNewSaleCommand.cs" />
+    <Compile Include="Users\AcceptMyNewSpendingCommand.cs" />
+    <Compile Include="Users\AcceptNewUpdateOrderCommand.cs" />
+    <Compile Include="Users\ClearUserParentCommand.cs" />
+    <Compile Include="Users\EditUserCommand.cs" />
+    <Compile Include="Users\InvotedNewUserCommand.cs" />
+    <Compile Include="Users\MyParentCanGetBenevolenceCommand.cs" />
+    <Compile Include="Users\UnFreezeUserCommand.cs" />
+    <Compile Include="Users\GetChildStoreSaleCashCommand.cs" />
+    <Compile Include="Users\GetChildStoreSaleBenevolenceCommand.cs" />
+    <Compile Include="Users\FreezeUserCommand.cs" />
+    <Compile Include="Users\SetMyParentCommand.cs" />
+    <Compile Include="Users\BindWeixinCommand.cs" />
+    <Compile Include="Users\UpdateInfoCommand.cs" />
+    <Compile Include="Wallets\AcceptNewShopCashTransferCommand.cs" />
+    <Compile Include="Wallets\BankCards\AddBankCardCommand.cs" />
+    <Compile Include="Wallets\BankCards\RemoveBankCardCommand.cs" />
+    <Compile Include="Wallets\BankCards\UpdateBankCardCommand.cs" />
+    <Compile Include="Wallets\BenevolenceTransfers\SetBenevolenceTransferSuccessCommand.cs" />
+    <Compile Include="Wallets\ShopCashTransfers\CreateShopCashTransferCommand.cs" />
+    <Compile Include="Wallets\ShopCashTransfers\SetShopCashTransferSuccessCommand.cs" />
+    <Compile Include="Wallets\CashTransfers\SetCashTransferSuccessCommand.cs" />
+    <Compile Include="Wallets\ClearWeekWithdrawAmountCommand.cs" />
+    <Compile Include="Wallets\CreateWalletCommand.cs" />
+    <Compile Include="Wallets\AcceptNewBenevolenceTransferCommand.cs" />
+    <Compile Include="Wallets\BenevolenceTransfers\CreateBenevolenceTransferCommand.cs" />
+    <Compile Include="Wallets\CashTransfers\CreateCashTransferCommand.cs" />
+    <Compile Include="Wallets\AcceptNewCashTransferCommand.cs" />
+    <Compile Include="Users\CreateUserCommand.cs" />
+    <Compile Include="Users\ExpressAddresses\AddExpressAddressCommand.cs" />
+    <Compile Include="Users\ExpressAddresses\RemoveExpressAddressCommand.cs" />
+    <Compile Include="Users\ExpressAddresses\UpdateExpressAddressCommand.cs" />
+    <Compile Include="Users\LockUserCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\UnLockUserCommand.cs" />
+    <Compile Include="Users\UpdateGenderCommand.cs" />
+    <Compile Include="Users\UpdateNickNameCommand.cs" />
+    <Compile Include="Users\UpdatePasswordCommand.cs" />
+    <Compile Include="Users\UpdatePortraitCommand.cs" />
+    <Compile Include="Users\UpdateRegionCommand.cs" />
+    <Compile Include="Wallets\FreezeWalletCommand.cs" />
+    <Compile Include="Wallets\IncentiveBenevolenceCommand.cs" />
+    <Compile Include="Wallets\ResetTodayStatisticCommand.cs" />
+    <Compile Include="Wallets\SetAccessCodeCommand.cs" />
+    <Compile Include="Wallets\RechargeApplys\ChangeRechargeStatusCommand.cs" />
+    <Compile Include="Wallets\RechargeApplys\CreateRechargeApplyCommand.cs" />
+    <Compile Include="Wallets\UnFreezeWalletCommand.cs" />
+    <Compile Include="Wallets\WithdrawApplys\ChangeWithdrawStatusCommand.cs" />
+    <Compile Include="Wallets\WithdrawApplys\CreateWithdrawApplyCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Common\Shop.Common.csproj">
+      <Project>{890eac5d-4afc-4ad5-b8ae-246e73d111ad}</Project>
+      <Name>Shop.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

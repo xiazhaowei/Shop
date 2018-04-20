@@ -1,0 +1,72 @@
+2018-01-05 10:12:21,635  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9000.
+2018-01-05 10:12:21,739  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:2741
+2018-01-05 10:12:22,496  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:2743
+2018-01-05 10:12:22,497  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:2744
+2018-01-05 10:17:14,112  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:2932
+2018-01-05 10:17:15,475  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:2934
+2018-01-05 11:03:31,290  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9000.
+2018-01-05 11:03:31,386  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:4605
+2018-01-05 11:03:31,871  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:4608
+2018-01-05 11:03:31,871  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:4609
+2018-01-05 11:05:05,881  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:4752
+2018-01-05 11:06:10,185  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:4792
+2018-01-05 11:35:17,043  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11101, socketError:Success, reason:Socket normal close., ex:
+2018-01-05 11:35:17,045  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11103, socketError:Success, reason:Socket normal close., ex:
+2018-01-05 11:35:55,938 ERROR ECommon.Scheduling.ScheduleService - Task has exception, name: RefreshBrokerAndTopicRouteInfo, due: 1000, period: 5000
+System.Exception: Get cluster brokers from name server failed, clusterName: DefaultCluster, nameServerAddress: 127.0.0.1:11100, remoting response code: 0, errorMessage: Remoting request timeout.
+   在 EQueue.Clients.ClientService.GetClusterBrokerList()
+   在 EQueue.Clients.ClientService.RefreshClusterBrokers()
+   在 EQueue.Clients.ClientService.<Start>b__17_0()
+   在 ECommon.Scheduling.ScheduleService.TaskCallback(Object obj)
+2018-01-05 11:37:02,247 ERROR ECommon.Scheduling.ScheduleService - Task has exception, name: RefreshBrokerAndTopicRouteInfo, due: 1000, period: 5000
+ECommon.Remoting.Exceptions.RemotingTimeoutException: Wait response from server[127.0.0.1:11100] timeout, request:[Id:5a4ef2b6aa13b722206c1acf, Type:1, Code:10005, Sequence:2596, CreatedTime:2018-01-05 11:36:22.068, BodyLength:432, Header: []], timeoutMillis:5000ms
+   在 ECommon.Remoting.SocketRemotingClient.InvokeSync(RemotingRequest request, Int32 timeoutMillis)
+   在 EQueue.Clients.ClientService.GetTopicRouteInfoList(String topic)
+   在 EQueue.Clients.ClientService.RefreshTopicRouteInfo()
+   在 EQueue.Clients.ClientService.<Start>b__17_0()
+   在 ECommon.Scheduling.ScheduleService.TaskCallback(Object obj)
+2018-01-05 11:37:39,753  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:5976
+2018-01-05 11:37:39,754  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:5977
+2018-01-05 11:41:20,380  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11101, socketError:Success, reason:Socket normal close., ex:
+2018-01-05 11:41:20,381  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11103, socketError:Success, reason:Socket normal close., ex:
+2018-01-05 11:41:26,427  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:6128
+2018-01-05 11:41:26,428  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:6129
+2018-01-05 11:42:29,769  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11101, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-05 11:43:19,474  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11103, socketError:Success, reason:Socket normal close., ex:
+2018-01-05 11:44:44,250  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:6233
+2018-01-05 11:44:44,251  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:6234
+2018-01-05 11:46:03,188 ERROR ECommon.Scheduling.ScheduleService - Task has exception, name: RefreshBrokerAndTopicRouteInfo, due: 1000, period: 5000
+ECommon.Remoting.Exceptions.RemotingTimeoutException: Wait response from server[127.0.0.1:11100] timeout, request:[Id:5a4ef4e8aa13b722206c1af4, Type:1, Code:10003, Sequence:2633, CreatedTime:2018-01-05 11:45:44.653, BodyLength:271, Header: []], timeoutMillis:5000ms
+   在 ECommon.Remoting.SocketRemotingClient.InvokeSync(RemotingRequest request, Int32 timeoutMillis)
+   在 EQueue.Clients.ClientService.GetClusterBrokerList()
+   在 EQueue.Clients.ClientService.RefreshClusterBrokers()
+   在 EQueue.Clients.ClientService.<Start>b__17_0()
+   在 ECommon.Scheduling.ScheduleService.TaskCallback(Object obj)
+2018-01-05 12:01:18,675  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9000.
+2018-01-05 12:01:18,748  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:7001
+2018-01-05 12:01:19,357  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:7002
+2018-01-05 12:01:19,358  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:7003
+2018-01-05 12:01:49,088  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7023
+2018-01-05 12:08:14,232  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9000.
+2018-01-05 12:08:14,359  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:7253
+2018-01-05 12:08:15,063  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:7256
+2018-01-05 12:08:15,064  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:7257
+2018-01-05 12:10:23,217  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7334
+2018-01-05 12:10:24,581  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7337
+2018-01-05 12:15:21,028  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:7337, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-05 12:15:21,028  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11100, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-05 21:57:19,173  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9000.
+2018-01-05 21:57:19,259  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:2310
+2018-01-05 21:57:20,138  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:2311
+2018-01-05 21:57:20,139  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:2312
+2018-01-05 22:05:20,503  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11103, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-05 22:05:20,503  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11101, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-05 22:09:40,254  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9000.
+2018-01-05 22:09:40,336  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:3736
+2018-01-05 22:09:40,831  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:3737
+2018-01-05 22:09:40,832  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:3738
+2018-01-05 23:19:22,858  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:11870
+2018-01-05 23:19:32,275  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:11886
+2018-01-05 23:32:12,463  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11101, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-05 23:32:12,463  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11103, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-05 23:32:12,473  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11886, socketError:ConnectionReset, reason:Socket receive error, ex:

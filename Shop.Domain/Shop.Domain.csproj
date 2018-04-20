@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FFC5A42C-AE1C-453A-AB4B-DFB5916FD5FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shop.Domain</RootNamespace>
+    <AssemblyName>Shop.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon, Version=2.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.2.5.3\lib\netstandard2.0\ECommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode, Version=2.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ENode.2.8.5\lib\netstandard2.0\ENode.dll</HintPath>
+    </Reference>
+    <Reference Include="EQueue, Version=2.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EQueue.2.5.3\lib\netstandard2.0\EQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\Admins\AdminCreatedEvent.cs" />
+    <Compile Include="Events\Admins\AdminDeletedEvent.cs" />
+    <Compile Include="Events\Admins\AdminUpdatedEvent.cs" />
+    <Compile Include="Events\Admins\AdminPasswordUpdatedEvent.cs" />
+    <Compile Include="Events\Admins\NewOperatRecordEvent.cs" />
+    <Compile Include="Events\Announcements\AnnouncementDeletedEvent.cs" />
+    <Compile Include="Events\Announcements\AnnouncementUpdatedEvent.cs" />
+    <Compile Include="Events\Announcements\AnnouncementCreatedEvent.cs" />
+    <Compile Include="Events\BenevolenceIndexs\BenevolenceIndexCreatedEvent.cs" />
+    <Compile Include="Events\GoodsBlocks\GoodsBlockWarpDeletedEvent.cs" />
+    <Compile Include="Events\GoodsBlocks\GoodsBlockDeletedEvent.cs" />
+    <Compile Include="Events\GoodsBlocks\GoodsBlockWarpUpdatedEvent.cs" />
+    <Compile Include="Events\GoodsBlocks\GoodsBlockUpdatedEvent.cs" />
+    <Compile Include="Events\GoodsBlocks\GoodsBlockCreatedEvent.cs" />
+    <Compile Include="Events\Carts\CartAddedGoodsEvent.cs" />
+    <Compile Include="Events\Carts\CartCreatedEvent.cs" />
+    <Compile Include="Events\Carts\CartGoodsQuantityChangedEvent.cs" />
+    <Compile Include="Events\Carts\CartRemovedGoodsEvent.cs" />
+    <Compile Include="Events\Categorys\CategoryDeletedEvent.cs" />
+    <Compile Include="Events\GoodsBlocks\GoodsBlockWarpCreatedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsDeletedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsSellOutUpdatedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsStatusUpdatedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsUpdatedEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationsAddedEvent.cs" />
+    <Compile Include="Events\Notifications\NotificationCreatedEvent.cs" />
+    <Compile Include="Events\Notifications\NotificationDeletedEvent.cs" />
+    <Compile Include="Events\Notifications\NotificationReadedEvent.cs" />
+    <Compile Include="Events\Notifications\NotificationSmsedEvent.cs" />
+    <Compile Include="Events\OfflineStores\NewSaleAcceptedEvent.cs" />
+    <Compile Include="Events\OfflineStores\NewSaleLogEvent.cs" />
+    <Compile Include="Events\OfflineStores\OfflineStoreCreatedEvent.cs" />
+    <Compile Include="Events\OfflineStores\OfflineStoreDeletedEvent.cs" />
+    <Compile Include="Events\OfflineStores\OfflineStoreStatisticInfoChangedEvent.cs" />
+    <Compile Include="Events\OfflineStores\OfflineStoreUpdatedEvent.cs" />
+    <Compile Include="Events\Orders\OrderClosedEvent.cs" />
+    <Compile Include="Events\Orders\OrderEvent.cs" />
+    <Compile Include="Events\Orders\OrderExpiredEvent.cs" />
+    <Compile Include="Events\Orders\OrderPaymentConfirmedEvent.cs" />
+    <Compile Include="Events\Orders\OrderPlacedEvent.cs" />
+    <Compile Include="Events\Orders\OrderReservationConfirmedEvent.cs" />
+    <Compile Include="Events\Orders\OrderSuccessedEvent.cs" />
+    <Compile Include="Events\Partners\AcceptedNewBalanceEvent.cs" />
+    <Compile Include="Events\Partners\NewBalanceLogEvent.cs" />
+    <Compile Include="Events\Partners\PartnerDeletedEvent.cs" />
+    <Compile Include="Events\Partners\PartnerStatisticInfoChangedEvent.cs" />
+    <Compile Include="Events\Partners\PartnerUpdatedEvent.cs" />
+    <Compile Include="Events\Payments\PaymentCompletedEvent.cs" />
+    <Compile Include="Events\Payments\PaymentInitiatedEvent.cs" />
+    <Compile Include="Events\Payments\PaymentRejectedEvent.cs" />
+    <Compile Include="Events\PubCategorys\PubCategoryDeletedEvent.cs" />
+    <Compile Include="Events\PubCategorys\PubCategoryCreatedEvent.cs" />
+    <Compile Include="Events\PubCategorys\PubCategoryUpdatedEvent.cs" />
+    <Compile Include="Events\Categorys\CategoryCreatedEvent.cs" />
+    <Compile Include="Events\Categorys\CategoryUpdatedEvent.cs" />
+    <Compile Include="Events\Goodses\CommentStatisticInfoChangedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsCreatedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationReservationCancelledEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationReservationCommittedEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificatioinEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationAddedEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationReservedEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationStockChangedEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationsUpdatedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsParamsUpdatedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsUnpublishedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsPublishedEvent.cs" />
+    <Compile Include="Events\Goodses\GoodsStoreUpdatedEvent.cs" />
+    <Compile Include="Events\Comments\CommentCreatedEvent.cs" />
+    <Compile Include="Events\Goodses\Specifications\SpecificationUpdatedEvent.cs" />
+    <Compile Include="Events\Grantees\AcceptedNewMoneyHelpEvent.cs" />
+    <Compile Include="Events\Grantees\AddTestifyedEvent.cs" />
+    <Compile Include="Events\Grantees\AddVerificationEvent.cs" />
+    <Compile Include="Events\Grantees\GranteeCreatedEvent.cs" />
+    <Compile Include="Events\Grantees\GranteeStatisticsInfoChangedEvent.cs" />
+    <Compile Include="Events\Grantees\GranteeUnVerifyedEvent.cs" />
+    <Compile Include="Events\Grantees\GranteeVerifyedEvent.cs" />
+    <Compile Include="Events\Stores\StoreAccessCodeUpdatedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\StoreOrderDeletedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\StoreOrderReturnExpressedEvent.cs" />
+    <Compile Include="Events\Stores\StoreReturnAddressUpdatedEvent.cs" />
+    <Compile Include="Events\Stores\StoreUpdatedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\AgreeRefundedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\AgreeReturnEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\ApplyReturnAndRefundedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\ApplyRefundedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\AgreedRefundEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\DisAgreedRefundEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\ServiceAgreedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\ServiceEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\ServiceExpiredEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\ServiceFinishExpressedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\ServiceExpressedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\ServiceApplyedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\OrderGoodsCreatedEvent.cs" />
+    <Compile Include="Events\Stores\Sections\SectionChangedEvent.cs" />
+    <Compile Include="Events\Stores\Sections\SectionCreatedEvent.cs" />
+    <Compile Include="Events\Stores\StoreCreatedEvent.cs" />
+    <Compile Include="Events\Stores\StoreLockedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\GoodsServices\ServiceFinishedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\StoreOrderConfirmExpressedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\StoreOrderCreatedEvent.cs" />
+    <Compile Include="Events\Stores\StoreOrders\StoreOrderExpressedEvent.cs" />
+    <Compile Include="Events\Stores\StoreStatisticInfoChangedEvent.cs" />
+    <Compile Include="Events\Stores\StoreStatusUpdatedEvent.cs" />
+    <Compile Include="Events\Stores\StoreUnLockedEvent.cs" />
+    <Compile Include="Events\Stores\StoreCustomerUpdatedEvent.cs" />
+    <Compile Include="Events\Stores\SubjectInfoUpdatedEvent.cs" />
+    <Compile Include="Events\ThirdCurrencys\NewThirdCurrencyImportLogEvent.cs" />
+    <Compile Include="Events\ThirdCurrencys\ThirdCurrencyDeletedEvent.cs" />
+    <Compile Include="Events\ThirdCurrencys\ThirdCurrencyImportedAmountChangedEvent.cs" />
+    <Compile Include="Events\ThirdCurrencys\ThirdCurrencyMaxImportAmountChangedEvent.cs" />
+    <Compile Include="Events\ThirdCurrencys\ThirdCurrencyUpdatedEvent.cs" />
+    <Compile Include="Events\ThirdCurrencys\ThirdCurrencyCreatedEvent.cs" />
+    <Compile Include="Events\Users\AcceptedChildStoreSaleCashEvent.cs" />
+    <Compile Include="Events\Users\AcceptedChildStoreSaleBenevolenceEvent.cs" />
+    <Compile Include="Events\Users\InvotedNewUserEvent.cs" />
+    <Compile Include="Events\Users\MyParentCanGetGratefulAwardEvent.cs" />
+    <Compile Include="Events\Users\MyParentRecommandAPasserEvent.cs" />
+    <Compile Include="Events\Users\MyParentSetedEvent.cs" />
+    <Compile Include="Events\Users\UserBindedWeixinEvent.cs" />
+    <Compile Include="Events\Users\UserGetChildCashEvent.cs" />
+    <Compile Include="Events\Users\UserGetChildGratefulAwardEvent.cs" />
+    <Compile Include="Events\Users\UserGetRecommandVipAwardEvent.cs" />
+    <Compile Include="Events\Users\UserGetChildProfitBenevolenceEvent.cs" />
+    <Compile Include="Events\Users\UserDirectGetRecommandVipAwardEvent.cs" />
+    <Compile Include="Events\Users\UserGifts\UserGiftAddedEvent.cs" />
+    <Compile Include="Events\Users\UserGifts\UserGiftPayedEvent.cs" />
+    <Compile Include="Events\Users\UserGifts\UserGiftRemarkChangedEvent.cs" />
+    <Compile Include="Events\Users\UserInfoUpdatedEvent.cs" />
+    <Compile Include="Events\Users\UserParentClearedEvent.cs" />
+    <Compile Include="Events\Users\UserEditedEvent.cs" />
+    <Compile Include="Events\Users\UserGenderUpdatedEvent.cs" />
+    <Compile Include="Events\Users\UserGetChildStoreSaleCashEvent.cs" />
+    <Compile Include="Events\Users\UserNickNameUpdatedEvent.cs" />
+    <Compile Include="Events\Users\UserPasswordUpdatedEvent.cs" />
+    <Compile Include="Events\Users\UserPortraitUpdatedEvent.cs" />
+    <Compile Include="Events\Users\UserRegionUpdatedEvent.cs" />
+    <Compile Include="Events\Users\UserRoleToAmbassadorEvent.cs" />
+    <Compile Include="Events\Users\UserRoleToDirectorEvent.cs" />
+    <Compile Include="Events\Users\UserRoleToVipPasserEvent.cs" />
+    <Compile Include="Events\Users\UserSpendingHighProfitGoodsEvent.cs" />
+    <Compile Include="Events\Wallets\BankCards\BankCardRemovedEvent.cs" />
+    <Compile Include="Events\Wallets\BankCards\BankCardEvent.cs" />
+    <Compile Include="Events\Wallets\BankCards\BankCardUpdatedEvent.cs" />
+    <Compile Include="Events\Users\MyParentCanGetBenevolenceEvent.cs" />
+    <Compile Include="Events\Partners\PartnerCreatedEvent.cs" />
+    <Compile Include="Events\Users\UserGetChildStoreSaleBenevolenceEvent.cs" />
+    <Compile Include="Events\Users\UserGetChildBenevolenceEvent.cs" />
+    <Compile Include="Events\Users\UserGetSaleBenevolenceEvent.cs" />
+    <Compile Include="Events\Users\UserSpendingTransformToBenevolenceEvent.cs" />
+    <Compile Include="Events\Wallets\BankCards\BankCardAddedEvent.cs" />
+    <Compile Include="Events\Wallets\BenevolenceTransfers\BenevolenceTransferStatusChangedEvent.cs" />
+    <Compile Include="Events\Wallets\NewShopCashTransferAcceptedEvent.cs" />
+    <Compile Include="Events\Wallets\ShopCashTransfers\ShopCashTransferCreatedEvent.cs" />
+    <Compile Include="Events\Wallets\ShopCashTransfers\ShopCashTransferStatusChangedEvent.cs" />
+    <Compile Include="Events\Wallets\CashTransfers\CashTransferStatusChangedEvent.cs" />
+    <Compile Include="Events\Wallets\RechargeApplys\RechargeApplyCreatedEvent.cs" />
+    <Compile Include="Events\Wallets\RechargeApplys\RechargeApplyStatusChangedEvent.cs" />
+    <Compile Include="Events\Wallets\RechargeApplys\RechargeApplySuccessEvent.cs" />
+    <Compile Include="Events\Wallets\StatisticInfoChangedEvent.cs" />
+    <Compile Include="Events\Wallets\WalletFreezeEvent.cs" />
+    <Compile Include="Events\Wallets\WalletUnFreezeEvent.cs" />
+    <Compile Include="Events\Wallets\WalletAccessCodeUpdatedEvent.cs" />
+    <Compile Include="Events\Wallets\WalletEvent.cs" />
+    <Compile Include="Events\Wallets\WithdrawApplys\WithdrawApplyCreatedEvent.cs" />
+    <Compile Include="Events\Wallets\WithdrawApplys\WithdrawApplyRejectedEvent.cs" />
+    <Compile Include="Events\Wallets\WithdrawApplys\WithdrawApplySuccessEvent.cs" />
+    <Compile Include="Events\Wallets\WithdrawStatisticInfoChangedEvent.cs" />
+    <Compile Include="Models\Admins\Admin.cs" />
+    <Compile Include="Models\Admins\AdminEditableInfo.cs" />
+    <Compile Include="Models\Admins\AdminInfo.cs" />
+    <Compile Include="Models\Admins\OperatRecordInfo.cs" />
+    <Compile Include="Models\Announcements\Announcement.cs" />
+    <Compile Include="Models\BenevolenceIndexs\BenevolenceIndex.cs" />
+    <Compile Include="Models\GoodsBlocks\GoodsBlock.cs" />
+    <Compile Include="Models\Carts\Cart.cs" />
+    <Compile Include="Models\Carts\CartGoodses\CartGoods.cs" />
+    <Compile Include="Models\Carts\CartGoodses\CartGoodsInfo.cs" />
+    <Compile Include="Models\Categorys\Category.cs" />
+    <Compile Include="Models\GoodsBlocks\GoodsBlockInfo.cs" />
+    <Compile Include="Models\GoodsBlocks\GoodsBlockWarp.cs" />
+    <Compile Include="Models\GoodsBlocks\GoodsBlockWarpInfo.cs" />
+    <Compile Include="Models\Goodses\GoodsEditableInfo.cs" />
+    <Compile Include="Models\Grantees\MoneyHelp.cs" />
+    <Compile Include="Models\Grantees\Testify.cs" />
+    <Compile Include="Models\Notifications\Notification.cs" />
+    <Compile Include="Models\Notifications\NotificationInfo.cs" />
+    <Compile Include="Models\OfflineStores\OfflineStore.cs" />
+    <Compile Include="Models\OfflineStores\OfflineStoreInfo.cs" />
+    <Compile Include="Models\OfflineStores\SaleLogInfo.cs" />
+    <Compile Include="Models\OfflineStores\StatisticInfo.cs" />
+    <Compile Include="Models\Orders\DefaultPricingService.cs" />
+    <Compile Include="Models\Orders\IPricingService.cs" />
+    <Compile Include="Models\Orders\Order.cs" />
+    <Compile Include="Models\Orders\OrderLine.cs" />
+    <Compile Include="Models\Orders\OrderTotal.cs" />
+    <Compile Include="Models\Orders\Specification.cs" />
+    <Compile Include="Models\Orders\SpecificationQuantity.cs" />
+    <Compile Include="Models\Partners\BalanceLogInfo.cs" />
+    <Compile Include="Models\Partners\PartnerInfo.cs" />
+    <Compile Include="Models\Partners\PartnerStatisticInfo.cs" />
+    <Compile Include="Models\Payments\Payment.cs" />
+    <Compile Include="Models\Payments\PaymentItem.cs" />
+    <Compile Include="Models\PubCategorys\PubCategory.cs" />
+    <Compile Include="Models\Stores\ReturnAddressInfo.cs" />
+    <Compile Include="Models\Stores\StoreEditableInfo.cs" />
+    <Compile Include="Models\Stores\StoreOrders\ExpressInfo.cs" />
+    <Compile Include="Models\Stores\StoreOrders\RefundApplyInfo.cs" />
+    <Compile Include="Models\Stores\StoreOrders\StoreOrderInfo.cs" />
+    <Compile Include="Models\Stores\StoreStatisticInfo.cs" />
+    <Compile Include="Models\Partners\Partner.cs" />
+    <Compile Include="Events\Users\UserNewSpendingEvent.cs" />
+    <Compile Include="Events\Users\UserRoleToPasserEvent.cs" />
+    <Compile Include="Events\Wallets\IncentiveUserBenevolenceEvent.cs" />
+    <Compile Include="Events\Wallets\BenevolenceTransfers\BenevolenceTransferCreatedEvent.cs" />
+    <Compile Include="Events\Wallets\NewBenevolenceTransferAcceptedEvent.cs" />
+    <Compile Include="Events\Wallets\NewCashTransferAcceptedEvent.cs" />
+    <Compile Include="Events\Wallets\CashTransfers\CashTransferCreatedEvent.cs" />
+    <Compile Include="Events\Users\ExpressAddresses\ExpressAddressAddedEvent.cs" />
+    <Compile Include="Events\Users\ExpressAddresses\ExpressAddressEvent.cs" />
+    <Compile Include="Events\Users\ExpressAddresses\ExpressAddressRemovedEvent.cs" />
+    <Compile Include="Events\Users\ExpressAddresses\ExpressAddressUpdatedEvent.cs" />
+    <Compile Include="Events\Users\UserCreatedEvent.cs" />
+    <Compile Include="Events\Users\UserEvent.cs" />
+    <Compile Include="Events\Users\UserFreezeEvent.cs" />
+    <Compile Include="Events\Users\UserLockedEvent.cs" />
+    <Compile Include="Events\Users\UserUnFreezeEvent.cs" />
+    <Compile Include="Events\Users\UserUnLockedEvent.cs" />
+    <Compile Include="Events\Wallets\CashTransfers\TransferEvent.cs" />
+    <Compile Include="Events\Wallets\WalletCreatedEvent.cs" />
+    <Compile Include="Models\Comments\RateInfo.cs" />
+    <Compile Include="Models\Goodses\Goods.cs" />
+    <Compile Include="Models\Goodses\GoodsStoreEditableInfo.cs" />
+    <Compile Include="Models\Goodses\GoodsInfo.cs" />
+    <Compile Include="Models\Goodses\GoodsParam.cs" />
+    <Compile Include="Models\Goodses\Specifications\Specification.cs" />
+    <Compile Include="Models\Goodses\Specifications\SpecificationAvailableQuantity.cs" />
+    <Compile Include="Models\Goodses\Specifications\SpecificationInfo.cs" />
+    <Compile Include="Models\Goodses\CommentStatisticInfo.cs" />
+    <Compile Include="Models\Comments\Comment.cs" />
+    <Compile Include="Models\Comments\CommentInfo.cs" />
+    <Compile Include="Models\Goodses\ReservationItem.cs" />
+    <Compile Include="Models\Goodses\Specifications\SpecificationStock.cs" />
+    <Compile Include="Models\Grantees\ExpressAddress.cs" />
+    <Compile Include="Models\Grantees\Grantee.cs" />
+    <Compile Include="Models\Grantees\GranteeInfo.cs" />
+    <Compile Include="Models\Grantees\GranteeStatisticsInfo.cs" />
+    <Compile Include="Models\Grantees\Verification.cs" />
+    <Compile Include="Models\PublishableExceptions\SpecificationInsufficientException.cs" />
+    <Compile Include="Models\Stores\StoreOrders\OrderGoods.cs" />
+    <Compile Include="Models\Stores\Sections\Section.cs" />
+    <Compile Include="Models\Stores\StoreOrders\GoodsServices\ServiceApplyInfo.cs" />
+    <Compile Include="Models\Stores\StoreOrders\GoodsServices\ServiceExpressInfo.cs" />
+    <Compile Include="Models\Stores\Store.cs" />
+    <Compile Include="Models\Stores\StoreCustomerEditableInfo.cs" />
+    <Compile Include="Models\Stores\StoreOrders\OrderGoodsInfo.cs" />
+    <Compile Include="Models\Stores\StoreInfo.cs" />
+    <Compile Include="Models\Stores\StoreOrders\GoodsServices\ServiceFinishExpressInfo.cs" />
+    <Compile Include="Models\Stores\StoreOrders\StoreOrder.cs" />
+    <Compile Include="Models\Stores\SubjectInfo.cs" />
+    <Compile Include="Models\ThirdCurrencys\ImportInfo.cs" />
+    <Compile Include="Models\ThirdCurrencys\ImportLogInfo.cs" />
+    <Compile Include="Models\ThirdCurrencys\ThirdCurrency.cs" />
+    <Compile Include="Models\ThirdCurrencys\ThirdCurrencyInfo.cs" />
+    <Compile Include="Models\Users\RecommandUserInfo.cs" />
+    <Compile Include="Models\Users\UserGifts\GiftInfo.cs" />
+    <Compile Include="Models\Users\UserGifts\UserGift.cs" />
+    <Compile Include="Models\Wallets\BankCards\BankCard.cs" />
+    <Compile Include="Models\Wallets\BankCards\BankCardInfo.cs" />
+    <Compile Include="Models\Wallets\BenevolenceTransfers\BenevolenceTransfer.cs" />
+    <Compile Include="Models\Wallets\CashTransfers\CashTransfer.cs" />
+    <Compile Include="Models\Wallets\BenevolenceTransfers\BenevolenceTransferInfo.cs" />
+    <Compile Include="Models\Wallets\CashTransfers\CashTransferInfo.cs" />
+    <Compile Include="Models\Users\ExpressAddresses\ExpressAddress.cs" />
+    <Compile Include="Models\Users\User.cs" />
+    <Compile Include="Models\Users\UserInfo.cs" />
+    <Compile Include="Models\Users\UserMobileIndex.cs" />
+    <Compile Include="Models\Wallets\RechargeApplys\RechargeApply.cs" />
+    <Compile Include="Models\Wallets\RechargeApplys\RechargeApplysInfo.cs" />
+    <Compile Include="Models\Wallets\ShopCashTransfers\ShopCashTransfer.cs" />
+    <Compile Include="Models\Wallets\ShopCashTransfers\ShopCashTransferInfo.cs" />
+    <Compile Include="Models\Wallets\Wallet.cs" />
+    <Compile Include="Models\Wallets\WalletStatisticInfo.cs" />
+    <Compile Include="Models\Wallets\WithdrawApplys\WithdrawApply.cs" />
+    <Compile Include="Models\Wallets\WithdrawApplys\WithdrawApplyInfo.cs" />
+    <Compile Include="Models\Wallets\WithdrawStatisticInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IUserMobileIndexRepository.cs" />
+    <Compile Include="Services\RegisterUserMobileService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Common\Shop.Common.csproj">
+      <Project>{890eac5d-4afc-4ad5-b8ae-246e73d111ad}</Project>
+      <Name>Shop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xia.Common\Xia.Common.csproj">
+      <Project>{f31f8b62-a8b2-4d83-b8e1-fc705d9f5a88}</Project>
+      <Name>Xia.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

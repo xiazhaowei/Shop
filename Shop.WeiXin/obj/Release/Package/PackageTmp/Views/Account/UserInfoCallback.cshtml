@@ -1,0 +1,26 @@
+﻿@model Senparc.Weixin.Open.OAuthAPIs.OAuthUserInfo
+@{
+    ViewBag.Title = "用户信息返回";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pd-lg bg-black text-white text-center">
+    <h2>开放平台OAuth2.0授权测试授权成功！</h2>
+</div>
+
+<div class="pd">
+    <div class="well">
+            <p><strong>您看到的这个页面来自于snsapi_userinfo授权，可以直接获取到用户详细信息。</strong></p>
+    </div>
+    <p>您的部分个人信息：</p>
+    <p>openid:@Model.openid</p>
+    <p>unionid:@Model.unionid</p>
+    <p>昵称:@Model.nickname</p>
+    <p>国家:@Model.country</p>
+    <p>省:@Model.province</p>
+    <p>市:@Model.city</p>
+    <p>性别:@Model.sex</p>
+    <p>
+        头像：<img src="@Model.headimgurl" />
+    </p>
+</div>

@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommon.Dapper</name>
+    </assembly>
+    <members>
+        <member name="T:ECommon.Dapper.SqlMapperExtensions">
+            <summary>Dapper extensions.
+            </summary>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.Insert(System.Data.IDbConnection,System.Object,System.String,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Insert data into table.
+            </summary>
+            <param name="connection"></param>
+            <param name="data"></param>
+            <param name="table"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.InsertAsync(System.Data.IDbConnection,System.Object,System.String,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Insert data async into table.
+            </summary>
+            <param name="connection"></param>
+            <param name="data"></param>
+            <param name="table"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.Update(System.Data.IDbConnection,System.Object,System.Object,System.String,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Updata data for table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="data"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.UpdateAsync(System.Data.IDbConnection,System.Object,System.Object,System.String,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Updata data async for table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="data"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.Delete(System.Data.IDbConnection,System.Object,System.String,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Delete data from table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.DeleteAsync(System.Data.IDbConnection,System.Object,System.String,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Delete data async from table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.GetCount(System.Data.IDbConnection,System.Object,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Get data count from table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.GetCountAsync(System.Data.IDbConnection,System.Object,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Get data count async from table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryList(System.Data.IDbConnection,System.Object,System.String,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query a list of data from table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryListAsync(System.Data.IDbConnection,System.Object,System.String,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query a list of data async from table with a specified condition.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryList``1(System.Data.IDbConnection,System.Object,System.String,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query a list of data from table with specified condition.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryListAsync``1(System.Data.IDbConnection,System.Object,System.String,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query a list of data async from table with specified condition.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryPaged(System.Data.IDbConnection,System.Object,System.String,System.String,System.Int32,System.Int32,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query paged data from a single table.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="orderBy"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryPagedAsync(System.Data.IDbConnection,System.Object,System.String,System.String,System.Int32,System.Int32,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query paged data async from a single table.
+            </summary>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="orderBy"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryPaged``1(System.Data.IDbConnection,System.Object,System.String,System.String,System.Int32,System.Int32,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query paged data from a single table.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="orderBy"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Dapper.SqlMapperExtensions.QueryPagedAsync``1(System.Data.IDbConnection,System.Object,System.String,System.String,System.Int32,System.Int32,System.String,System.Boolean,System.Data.IDbTransaction,System.Nullable{System.Int32})">
+            <summary>Query paged data async from a single table.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="connection"></param>
+            <param name="condition"></param>
+            <param name="table"></param>
+            <param name="orderBy"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <param name="columns"></param>
+            <param name="isOr"></param>
+            <param name="transaction"></param>
+            <param name="commandTimeout"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

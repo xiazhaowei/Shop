@@ -1,0 +1,564 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFE8C421-BD86-4B17-A1EA-2DDF224049F9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shop.Api</RootNamespace>
+    <AssemblyName>Shop.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Alipay, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Alipay.2.0.0\lib\net35\Alipay.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-core">
+      <HintPath>lib\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-dysmsapi">
+      <HintPath>lib\aliyun-net-sdk-dysmsapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Aliyun.OSS, Version=2.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aliyun.OSS.SDK.2.7.0\lib\Aliyun.OSS.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.4.0.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon, Version=2.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.2.5.7\lib\netstandard2.0\ECommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.Autofac, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.Autofac.2.5.0\lib\netstandard2.0\ECommon.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.Dapper, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.Dapper.2.5.0\lib\netstandard2.0\ECommon.Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.JsonNet, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.JsonNet.2.5.0\lib\netstandard2.0\ECommon.JsonNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.Log4Net, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.Log4Net.2.5.2\lib\netstandard2.0\ECommon.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode, Version=2.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ENode.2.8.5\lib\netstandard2.0\ENode.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode.EQueue, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ENode.EQueue.2.0.0\lib\netstandard2.0\ENode.EQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode.SqlServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ENode.SqlServer.1.0.0\lib\netstandard2.0\ENode.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EQueue, Version=2.5.5.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EQueue.2.5.5.2\lib\netstandard2.0\EQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON, Version=0.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LitJson.0.12.0\lib\net45\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.0.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=3.2.1.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.3.2.1\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu">
+      <HintPath>lib\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.HighLight">
+      <HintPath>lib\PanGu.HighLight.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.Lucene.Analyzer">
+      <HintPath>lib\PanGu.Lucene.Analyzer.dll</HintPath>
+    </Reference>
+    <Reference Include="Purplelight.Framework.Autofac.Integration.WebApi, Version=0.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Purplelight.Framework.Autofac.Integration.WebApi.0.2.2\lib\net45\Purplelight.Framework.Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="lib\PanGu.xml" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AliPayAPI\AliPayApi.cs" />
+    <Compile Include="AliPayAPI\Config.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AnnouncementsController.cs" />
+    <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\BenevolenceIndexController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\GoodsBlockController.cs" />
+    <Compile Include="Controllers\GoodsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NotificationController.cs" />
+    <Compile Include="Controllers\OfflineStoreController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PartnerController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\PubCategoryController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\StoreOrderController.cs" />
+    <Compile Include="Controllers\ThirdCurrencyController.cs" />
+    <Compile Include="Controllers\UploaderController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\WalletController.cs" />
+    <Compile Include="ENodeExtensions.cs" />
+    <Compile Include="Extensions\AsyncTaskResultExtensions.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ApiSession.cs" />
+    <Compile Include="Services\CacheKeySupplier.cs" />
+    <Compile Include="Services\ICacheHelper.cs" />
+    <Compile Include="Services\MemoryCacheHelper.cs" />
+    <Compile Include="Services\SearchEngine.cs" />
+    <Compile Include="Models\Request\Announcements\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Carts\AddCartGoodsRequest.cs" />
+    <Compile Include="Models\Request\Carts\RemoveCartGoodsRequest.cs" />
+    <Compile Include="Models\Request\Categorys\ListPageRequest.cs" />
+    <Compile Include="Models\Request\DelRequest.cs" />
+    <Compile Include="Models\Request\GoodsBlocks\ListPageRequest.cs" />
+    <Compile Include="Models\Request\GoodsBlockWarps\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Goodses\AddGoodsRequest.cs" />
+    <Compile Include="Models\Request\Goodses\AddGoodsSpecificationsRequest.cs" />
+    <Compile Include="Models\Request\Goodses\CategoryGoodsRequest.cs" />
+    <Compile Include="Models\Request\Goodses\CommentRequest.cs" />
+    <Compile Include="Models\Request\Goodses\GetParamsRequest.cs" />
+    <Compile Include="Models\Request\Goodses\GoodsInfoRequest.cs" />
+    <Compile Include="Models\Request\Goodses\GoodsListRequest.cs" />
+    <Compile Include="Models\Request\Goodses\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Goodses\PublishRequest.cs" />
+    <Compile Include="Models\Request\Goodses\SearchGoodsesRequest.cs" />
+    <Compile Include="Models\Request\Goodses\UpdateGoodsParamsRequest.cs" />
+    <Compile Include="Models\Request\Goodses\UpdateGoodsRequest.cs" />
+    <Compile Include="Models\Request\Goodses\UpdateGoodsSpecificationsRequest.cs" />
+    <Compile Include="Models\Request\InfoRequest.cs" />
+    <Compile Include="Models\Request\OfflineStores\AcceptNewSaleRequest.cs" />
+    <Compile Include="Models\Request\OfflineStores\ListPageRequest.cs" />
+    <Compile Include="Models\Request\OfflineStores\OfflineStoresRequest.cs" />
+    <Compile Include="Models\Request\Orders\AddOrderRequest.cs" />
+    <Compile Include="Models\Request\Orders\ConfirmPaymentRequest.cs" />
+    <Compile Include="Models\Request\Partners\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Payment\PaymentRequest.cs" />
+    <Compile Include="Models\Request\Payment\ProcessorPaymentRequest.cs" />
+    <Compile Include="Models\Request\Payment\WxPaymentRequest.cs" />
+    <Compile Include="Models\Request\PubCategorys\ListPageRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\AgreeReturnRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\ApplyRefundRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\DeliverRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\ExpressScheduleRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\ListPageRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\StoreOrderOpRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\StoreOrdersRequest.cs" />
+    <Compile Include="Models\Request\StoreOrders\UserOrdersRequest.cs" />
+    <Compile Include="Models\Request\Store\ApplyStoreRequest.cs" />
+    <Compile Include="Models\Request\Store\EditRequest.cs" />
+    <Compile Include="Models\Request\Store\EditReturnAddressRequest.cs" />
+    <Compile Include="Models\Request\Store\EditStatusRequest.cs" />
+    <Compile Include="Models\Request\Store\EditSubjectRequest.cs" />
+    <Compile Include="Models\Request\Store\HomeInfoRequest.cs" />
+    <Compile Include="Models\Request\Store\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Store\ReturnAddressInfoRequest.cs" />
+    <Compile Include="Models\Request\Store\SetAccessCodeRequest.cs" />
+    <Compile Include="Models\Request\ThirdCurrencys\ImportCurrencyRequest.cs" />
+    <Compile Include="Models\Request\ThirdCurrencys\ImportLogsRequest.cs" />
+    <Compile Include="Models\Request\ThirdCurrencys\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Users\AddExpressAddressRequest.cs" />
+    <Compile Include="Models\Request\Users\AddUserGiftRequest.cs" />
+    <Compile Include="Models\Request\Users\BindWeixinRequest.cs" />
+    <Compile Include="Models\Request\Users\ChangePasswordRequest.cs" />
+    <Compile Include="Models\Request\Users\CheckPhoneAvailableRequest.cs" />
+    <Compile Include="Models\Request\Users\DeleteExpressAddressRequest.cs" />
+    <Compile Include="Models\Request\Users\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Users\LoginRequest.cs" />
+    <Compile Include="Models\Request\Users\MsgLoginRequest.cs" />
+    <Compile Include="Models\Request\Users\RegisterRequest.cs" />
+    <Compile Include="Models\Request\Users\ResetPasswordRequest.cs" />
+    <Compile Include="Models\Request\Users\SendCodeRequest.cs" />
+    <Compile Include="Models\Request\Users\SendMsgCodeRequest.cs" />
+    <Compile Include="Models\Request\Users\SetGenderRequest.cs" />
+    <Compile Include="Models\Request\Users\SetMyParentRequest.cs" />
+    <Compile Include="Models\Request\Users\SetNickNameRequest.cs" />
+    <Compile Include="Models\Request\Users\SetPortraitRequest.cs" />
+    <Compile Include="Models\Request\Users\SetRegionRequest.cs" />
+    <Compile Include="Models\Request\Users\SetUserGiftPayedRequest.cs" />
+    <Compile Include="Models\Request\Users\UnifyWeixinInfoRequest.cs" />
+    <Compile Include="Models\Request\Users\UserInvotesRequest.cs" />
+    <Compile Include="Models\Request\Users\UserStateRequest.cs" />
+    <Compile Include="Models\Request\Users\VerifyCodeRequest.cs" />
+    <Compile Include="Models\Request\Users\VerifyMsgCodeRequest.cs" />
+    <Compile Include="Models\Request\Users\WeixinLoginRequest.cs" />
+    <Compile Include="Models\Request\Wallet\AcceptTransferRequest.cs" />
+    <Compile Include="Models\Request\Wallet\AddBankCardRequest.cs" />
+    <Compile Include="Models\Request\Wallet\AddBenevolenceTransferRequest.cs" />
+    <Compile Include="Models\Request\Wallet\AddCashTransferRequest.cs" />
+    <Compile Include="Models\Request\Wallet\AddShopCashTransferRequest.cs" />
+    <Compile Include="Models\Request\Wallet\ApplyRechargeRequest.cs" />
+    <Compile Include="Models\Request\Wallet\ApplyWithdrawRequest.cs" />
+    <Compile Include="Models\Request\Wallet\BenevolenceTransfersRequest.cs" />
+    <Compile Include="Models\Request\Wallet\CashPayRequest.cs" />
+    <Compile Include="Models\Request\Wallet\CashTransfersRequest.cs" />
+    <Compile Include="Models\Request\Wallet\ChangeRechargeApplyStatusRequest.cs" />
+    <Compile Include="Models\Request\Wallet\ChangeWithdrawApplyStatusRequest.cs" />
+    <Compile Include="Models\Request\Wallet\DeleteBankCardRequest.cs" />
+    <Compile Include="Models\Request\Wallet\IncentiveBenevolenceRequest.cs" />
+    <Compile Include="Models\Request\Wallet\IncentiveWalletRequest.cs" />
+    <Compile Include="Models\Request\Wallet\ListPageRequest.cs" />
+    <Compile Include="Models\Request\Wallet\RechargeApplysListPageRequest.cs" />
+    <Compile Include="Models\Request\Wallet\RechargeRequest.cs" />
+    <Compile Include="Models\Request\Wallet\SetAccessCodeRequest.cs" />
+    <Compile Include="Models\Request\Wallet\ShopCashTransfersRequest.cs" />
+    <Compile Include="Models\Request\Wallet\WithdrawApplysListPageRequest.cs" />
+    <Compile Include="Models\Response\Announcements\LatestAnnouncementResponse.cs" />
+    <Compile Include="Models\Response\Announcements\ListResponse.cs" />
+    <Compile Include="Models\Response\Apps\AppVersion.cs" />
+    <Compile Include="Models\Response\Apps\AppVersionResponse.cs" />
+    <Compile Include="Models\Response\Apps\HomeBanner.cs" />
+    <Compile Include="Models\Response\Apps\HomeBannerResponse.cs" />
+    <Compile Include="Models\Response\Apps\HomeBanners.cs" />
+    <Compile Include="Models\Response\BaseApiResponse.cs" />
+    <Compile Include="Models\Response\BenevolenceIndex\BenevolenceIndexLogsResponse.cs" />
+    <Compile Include="Models\Response\BenevolenceIndex\BenevolenceRankResponse.cs" />
+    <Compile Include="Models\Response\BenevolenceIndex\InfoResponse.cs" />
+    <Compile Include="Models\Response\Carts\CartInfoResponse.cs" />
+    <Compile Include="Models\Response\Categorys\CategoryTreeResponse.cs" />
+    <Compile Include="Models\Response\Categorys\ListPageResponse.cs" />
+    <Compile Include="Models\Response\GoodsBlocks\GoodsBlockInfoResponse.cs" />
+    <Compile Include="Models\Response\GoodsBlocks\HomeGoodsBlockWarpsResponse.cs" />
+    <Compile Include="Models\Response\GoodsBlocks\ListResponse.cs" />
+    <Compile Include="Models\Response\GoodsBlockWarps\ListResponse.cs" />
+    <Compile Include="Models\Response\Goodses\AddGoodsResponse.cs" />
+    <Compile Include="Models\Response\Goodses\AllGoodsResponse.cs" />
+    <Compile Include="Models\Response\Goodses\GetParamsResponse.cs" />
+    <Compile Include="Models\Response\Goodses\GetSpecificationsResponse.cs" />
+    <Compile Include="Models\Response\Goodses\GoodsAlisesResponse.cs" />
+    <Compile Include="Models\Response\Goodses\GoodsesResponse.cs" />
+    <Compile Include="Models\Response\Goodses\GoodsInfoResponse.cs" />
+    <Compile Include="Models\Response\Goodses\GoodsListResponse.cs" />
+    <Compile Include="Models\Response\Goodses\HomePageGoodsesResponse.cs" />
+    <Compile Include="Models\Response\Notifications\MyNotificationsResponse.cs" />
+    <Compile Include="Models\Response\OfflineStores\ListPageResponse.cs" />
+    <Compile Include="Models\Response\OfflineStores\OfflineStoreInfoResponse.cs" />
+    <Compile Include="Models\Response\OfflineStores\OfflineStoresResponse.cs" />
+    <Compile Include="Models\Response\OfflineStores\TotalTodaySaleResponse.cs" />
+    <Compile Include="Models\Response\Orders\AddOrderResponse.cs" />
+    <Compile Include="Models\Response\Partners\ListResponse.cs" />
+    <Compile Include="Models\Response\Partners\MyPartnersResponse.cs" />
+    <Compile Include="Models\Response\Payments\GetOpenIdAndAccessTokenResponse.cs" />
+    <Compile Include="Models\Response\Payments\WeChatPayResponse.cs" />
+    <Compile Include="Models\Response\PubCategorys\ListPageResponse.cs" />
+    <Compile Include="Models\Response\PubCategorys\PubCategoryTreeResponse.cs" />
+    <Compile Include="Models\Response\StoreOrders\InfoResponse.cs" />
+    <Compile Include="Models\Response\StoreOrders\ListPageResponse.cs" />
+    <Compile Include="Models\Response\StoreOrders\StoreOrdersResponse.cs" />
+    <Compile Include="Models\Response\StoreOrders\UserOrdersResponse.cs" />
+    <Compile Include="Models\Response\Store\HomeInfoResponse.cs" />
+    <Compile Include="Models\Response\Store\ListPageResponse.cs" />
+    <Compile Include="Models\Response\Store\ReturnAddressInfoResponse.cs" />
+    <Compile Include="Models\Response\Store\StoreInfoResponse.cs" />
+    <Compile Include="Models\Response\Store\TotalTodaySaleResponse.cs" />
+    <Compile Include="Models\Response\ThirdCurrencys\ImportLogsResponse.cs" />
+    <Compile Include="Models\Response\ThirdCurrencys\ListResponse.cs" />
+    <Compile Include="Models\Response\ThirdCurrencys\ThirdCurrencysResponse.cs" />
+    <Compile Include="Models\Response\Uploader\SingleFileUploadResponse.cs" />
+    <Compile Include="Models\Response\User\AddUserGiftResponse.cs" />
+    <Compile Include="Models\Response\User\CheckPhoneAvailableResponse.cs" />
+    <Compile Include="Models\Response\User\ExpressAddressesResponse.cs" />
+    <Compile Include="Models\Response\User\FindUserResponse.cs" />
+    <Compile Include="Models\Response\User\GetUserUnPayGiftResponse.cs" />
+    <Compile Include="Models\Response\User\ListPageResponse.cs" />
+    <Compile Include="Models\Response\User\LoginResponse.cs" />
+    <Compile Include="Models\Response\User\MeInfoResponse.cs" />
+    <Compile Include="Models\Response\User\MyInvotesResponse.cs" />
+    <Compile Include="Models\Response\User\MyTeamResponse.cs" />
+    <Compile Include="Models\Response\User\RegisterResponse.cs" />
+    <Compile Include="Models\Response\User\SendMsgCodeResponse.cs" />
+    <Compile Include="Models\Response\User\ShopLoginResponse.cs" />
+    <Compile Include="Models\Response\User\UserInfoResponse.cs" />
+    <Compile Include="Models\Response\User\VerifyCodeResponse.cs" />
+    <Compile Include="Models\Response\Wallet\GetBankCardsResponse.cs" />
+    <Compile Include="Models\Response\Wallet\GetBenevolenceTransfersResponse.cs" />
+    <Compile Include="Models\Response\Wallet\GetCashTransfersResponse.cs" />
+    <Compile Include="Models\Response\Wallet\GetShopCashTransfersResponse.cs" />
+    <Compile Include="Models\Response\Wallet\IncentiveLogsResponse.cs" />
+    <Compile Include="Models\Response\Wallet\ListPageResponse.cs" />
+    <Compile Include="Models\Response\Wallet\RechargeApplyLogsResponse.cs" />
+    <Compile Include="Models\Response\Wallet\RechargeApplysListPageResponse.cs" />
+    <Compile Include="Models\Response\Wallet\TotalBenevolenceResponse.cs" />
+    <Compile Include="Models\Response\Wallet\WalletInfoResponse.cs" />
+    <Compile Include="Models\Response\Wallet\WithdrawApplyLogsResponse.cs" />
+    <Compile Include="Models\Response\Wallet\WithdrawApplysListPageResponse.cs" />
+    <Compile Include="Models\WalletInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ContextService.cs" />
+    <Compile Include="Services\IContextService.cs" />
+    <Compile Include="SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="TopicProviders\CommandTopicProvider.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Utils\AliyunExpressSchedule.cs" />
+    <Compile Include="Utils\IExpressSchedule.cs" />
+    <Compile Include="Utils\ISMSender.cs" />
+    <Compile Include="Utils\Oss\AliyunOssConfig.cs" />
+    <Compile Include="Utils\Oss\AliyunOssUploader.cs" />
+    <Compile Include="Utils\AliyunSMSender.cs" />
+    <Compile Include="Utils\Oss\IOssUploader.cs" />
+    <Compile Include="WxPayAPI\DownloadBill.cs" />
+    <Compile Include="WxPayAPI\JsApiPay.cs" />
+    <Compile Include="WxPayAPI\lib\Config.cs" />
+    <Compile Include="WxPayAPI\lib\Data.cs" />
+    <Compile Include="WxPayAPI\lib\Exception.cs" />
+    <Compile Include="WxPayAPI\lib\HttpService.cs" />
+    <Compile Include="WxPayAPI\lib\Log.cs" />
+    <Compile Include="WxPayAPI\lib\Notify.cs" />
+    <Compile Include="WxPayAPI\lib\WxPayApi.cs" />
+    <Compile Include="WxPayAPI\MicroPay.cs" />
+    <Compile Include="WxPayAPI\NativeNotify.cs" />
+    <Compile Include="WxPayAPI\NativePay.cs" />
+    <Compile Include="WxPayAPI\OrderQuery.cs" />
+    <Compile Include="WxPayAPI\Refund.cs" />
+    <Compile Include="WxPayAPI\RefundQuery.cs" />
+    <Compile Include="WxPayAPI\ResultNotify.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Json\appVersion.json" />
+    <Content Include="Json\homeBanners.json" />
+    <Content Include="log4net.config" />
+    <None Include="packages.config" />
+    <Content Include="Uploads\blob" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\web.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="WxPayAPI\cert\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Commands\Shop.Commands.csproj">
+      <Project>{d96cf52c-0504-45c5-98e3-e1f7c4f864e8}</Project>
+      <Name>Shop.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Common\Shop.Common.csproj">
+      <Project>{890eac5d-4afc-4ad5-b8ae-246e73d111ad}</Project>
+      <Name>Shop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.QueryServices.Dapper\Shop.QueryServices.Dapper.csproj">
+      <Project>{34c1f48a-716f-48a3-876c-5ae89bfc1f3c}</Project>
+      <Name>Shop.QueryServices.Dapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.QueryServices\Shop.QueryServices.csproj">
+      <Project>{e373541c-70ee-4330-a7cf-712280fb51e0}</Project>
+      <Name>Shop.QueryServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xia.Common\Xia.Common.csproj">
+      <Project>{f31f8b62-a8b2-4d83-b8e1-fc705d9f5a88}</Project>
+      <Name>Xia.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2133</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

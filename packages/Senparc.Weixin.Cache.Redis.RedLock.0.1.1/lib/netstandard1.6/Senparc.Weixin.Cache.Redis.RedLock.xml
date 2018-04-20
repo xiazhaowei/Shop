@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senparc.Weixin.Cache.Redis.RedLock</name>
+    </assembly>
+    <members>
+        <member name="F:Redlock.CSharp.Redlock.UnlockScript">
+            <summary>
+            String containing the Lua unlock script.
+            </summary>
+        </member>
+    </members>
+</doc>

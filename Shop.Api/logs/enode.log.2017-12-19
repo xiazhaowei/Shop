@@ -1,0 +1,2 @@
+2017-12-19 10:59:28,763  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.100:9002
+2017-12-19 17:26:00,295  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.0.102:9002

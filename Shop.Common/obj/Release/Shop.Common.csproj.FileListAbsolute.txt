@@ -1,0 +1,10 @@
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\bin\Release\Shop.Common.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\bin\Release\Shop.Common.pdb
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\bin\Release\Xia.Common.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\bin\Release\Newtonsoft.Json.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\bin\Release\Xia.Common.pdb
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\bin\Release\Newtonsoft.Json.xml
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\obj\Release\Shop.Common.csprojResolveAssemblyReference.cache
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\obj\Release\Shop.Common.csproj.CoreCompileInputs.cache
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\obj\Release\Shop.Common.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Common\obj\Release\Shop.Common.pdb

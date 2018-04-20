@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommon.Log4Net</name>
+    </assembly>
+    <members>
+        <member name="T:ECommon.Configurations.ConfigurationExtensions">
+            <summary>ENode configuration class Autofac extensions.
+            </summary>
+        </member>
+        <member name="M:ECommon.Configurations.ConfigurationExtensions.UseLog4Net(ECommon.Configurations.Configuration)">
+            <summary>Use Log4Net as the logger.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Configurations.ConfigurationExtensions.UseLog4Net(ECommon.Configurations.Configuration,System.String,System.String)">
+            <summary>Use Log4Net as the logger.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.Log4Net.Log4NetLogger">
+            <summary>Log4Net based logger implementation.
+            </summary>
+        </member>
+        <member name="M:ECommon.Log4Net.Log4NetLogger.#ctor(log4net.ILog)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="T:ECommon.Log4Net.Log4NetLoggerFactory">
+            <summary>Log4Net based logger factory.
+            </summary>
+        </member>
+        <member name="M:ECommon.Log4Net.Log4NetLoggerFactory.#ctor(System.String,System.String)">
+            <summary>Parameterized constructor.
+            </summary>
+            <param name="configFile"></param>
+            <param name="loggerRepository"></param>
+        </member>
+        <member name="M:ECommon.Log4Net.Log4NetLoggerFactory.Create(System.String)">
+            <summary>Create a new Log4NetLogger instance.
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Log4Net.Log4NetLoggerFactory.Create(System.Type)">
+            <summary>Create a new Log4NetLogger instance.
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

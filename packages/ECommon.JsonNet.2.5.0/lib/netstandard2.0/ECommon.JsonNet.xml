@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommon.JsonNet</name>
+    </assembly>
+    <members>
+        <member name="T:ECommon.Configurations.ConfigurationExtensions">
+            <summary>ENode configuration class Autofac extensions.
+            </summary>
+        </member>
+        <member name="M:ECommon.Configurations.ConfigurationExtensions.UseJsonNet(ECommon.Configurations.Configuration)">
+            <summary>Use Json.Net as the json serializer.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ECommon.JsonNet.NewtonsoftJsonSerializer">
+            <summary>Json.Net implementationof IJsonSerializer.
+            </summary>
+        </member>
+        <member name="M:ECommon.JsonNet.NewtonsoftJsonSerializer.Serialize(System.Object)">
+            <summary>Serialize an object to json string.
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.JsonNet.NewtonsoftJsonSerializer.Deserialize(System.String,System.Type)">
+            <summary>Deserialize a json string to an object.
+            </summary>
+            <param name="value"></param>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.JsonNet.NewtonsoftJsonSerializer.Deserialize``1(System.String)">
+            <summary>Deserialize a json string to a strong type object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

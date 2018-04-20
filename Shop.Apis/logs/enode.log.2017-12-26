@@ -1,0 +1,9 @@
+2017-12-26 10:29:25,640  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 21:00:11,328  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 21:03:28,671  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 21:17:12,445  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 21:34:12,482  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 22:07:02,020  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 22:09:57,209  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 22:12:58,395  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-26 22:17:45,326  INFO ENode.EQueue.SendQueueMessageService - ENode message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:7f0000015d2b00007f63000000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:4, Tag:Shop.Commands.Users.UpdateNickNameCommand, CreatedTime:2017/12/26 22:17:45, StoredTime:2017/12/26 22:17:45],ErrorMessage:], routingKey: 385a712f-f126-4116-8391-015e28199082, messageId: 5a425a09aa13b737c0d10f38, version: 

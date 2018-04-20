@@ -1,0 +1,25 @@
+2017-12-23 00:04:14,855  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.0.104:9002.
+2017-12-23 00:04:14,958  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.0.104:11100, local endpoint:192.168.0.104:7849
+2017-12-23 00:04:15,115  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.0.104:11101, local endpoint:192.168.0.104:7850
+2017-12-23 00:04:15,115  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.0.104:11103, local endpoint:192.168.0.104:7851
+2017-12-23 22:33:26,278  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9002.
+2017-12-23 22:33:26,380  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:10124
+2017-12-23 22:33:27,046  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:10125
+2017-12-23 22:33:27,047  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:10126
+2017-12-23 22:37:18,339  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11100, socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-12-23 22:55:45,203  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9002.
+2017-12-23 22:55:45,584  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:12524
+2017-12-23 22:55:46,512  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:12527
+2017-12-23 22:55:46,513  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:12528
+2017-12-23 22:57:05,947  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:12705
+2017-12-23 22:57:07,223  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:12708
+2017-12-23 23:00:21,160  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:12708, socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-12-23 23:00:21,162  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11101, socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-12-23 23:00:21,167  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11103, socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-12-23 23:00:21,171  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11100, socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-12-23 23:05:45,976  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9002.
+2017-12-23 23:05:46,107  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:13439
+2017-12-23 23:05:46,961  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:13443
+2017-12-23 23:05:46,962  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:13444
+2017-12-23 23:06:53,774  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:13531
+2017-12-23 23:06:55,742  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:13534

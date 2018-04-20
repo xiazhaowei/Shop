@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4063D8B4-CADF-464F-AB15-13AC56841E49}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Shop.CommandService</RootNamespace>
+    <AssemblyName>Shop.CommandService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.1\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon, Version=2.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.2.5.7\lib\netstandard2.0\ECommon.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.Autofac, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.Autofac.2.5.0\lib\netstandard2.0\ECommon.Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.Dapper, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.Dapper.2.5.0\lib\netstandard2.0\ECommon.Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.JsonNet, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.JsonNet.2.5.0\lib\netstandard2.0\ECommon.JsonNet.dll</HintPath>
+    </Reference>
+    <Reference Include="ECommon.Log4Net, Version=2.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ECommon.Log4Net.2.5.2\lib\netstandard2.0\ECommon.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode, Version=2.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ENode.2.8.5\lib\netstandard2.0\ENode.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode.EQueue, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ENode.EQueue.2.0.0\lib\netstandard2.0\ENode.EQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="ENode.SqlServer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ENode.SqlServer.1.0.0\lib\netstandard2.0\ENode.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EQueue, Version=2.5.5.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EQueue.2.5.5.2\lib\netstandard2.0\EQueue.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.4.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap.cs" />
+    <Compile Include="ENodeExtensions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Service1.Designer.cs">
+      <DependentUpon>Service1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopicProviders\DomainEventTopicProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.CommandHandlers\Shop.CommandHandlers.csproj">
+      <Project>{41892512-a536-476a-9730-4360ce7802c2}</Project>
+      <Name>Shop.CommandHandlers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Commands\Shop.Commands.csproj">
+      <Project>{d96cf52c-0504-45c5-98e3-e1f7c4f864e8}</Project>
+      <Name>Shop.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Common\Shop.Common.csproj">
+      <Project>{890eac5d-4afc-4ad5-b8ae-246e73d111ad}</Project>
+      <Name>Shop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Domain\Shop.Domain.csproj">
+      <Project>{ffc5a42c-ae1c-453a-ab4b-dfb5916fd5ff}</Project>
+      <Name>Shop.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.Repositories.Dapper\Shop.Repositories.Dapper.csproj">
+      <Project>{1df98384-09e0-4357-9b64-87022341ea1e}</Project>
+      <Name>Shop.Repositories.Dapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

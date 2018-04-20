@@ -1,0 +1,41 @@
+2018-01-25 15:25:20,295  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-25 15:25:20,414  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:6431
+2018-01-25 15:25:20,991  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:6432
+2018-01-25 15:25:20,992  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:6433
+2018-01-25 15:29:50,488  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-25 15:29:51,256  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:6836
+2018-01-25 15:29:52,485  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:6848
+2018-01-25 15:29:52,486  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:6849
+2018-01-25 15:30:49,351  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:7061
+2018-01-25 15:30:51,501  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:7065
+2018-01-25 15:45:36,764 ERROR ECommon.Scheduling.ScheduleService - Task has exception, name: RefreshBrokerAndTopicRouteInfo, due: 1000, period: 5000
+System.Exception: Get cluster brokers from name server failed, clusterName: DefaultCluster, nameServerAddress: 192.168.1.142:11100, remoting response code: 0, errorMessage: Remoting request timeout.
+   在 EQueue.Clients.ClientService.GetClusterBrokerList()
+   在 EQueue.Clients.ClientService.RefreshClusterBrokers()
+   在 EQueue.Clients.ClientService.<Start>b__17_0()
+   在 ECommon.Scheduling.ScheduleService.TaskCallback(Object obj)
+2018-01-25 16:32:40,346  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-25 16:32:40,419  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:11720
+2018-01-25 16:32:40,935  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:11721
+2018-01-25 16:32:40,936  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:11722
+2018-01-25 16:44:07,440  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:12707
+2018-01-25 16:44:07,573  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:12710
+2018-01-25 16:47:13,207  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:12707, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-25 16:47:13,216  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:11100, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-25 17:00:33,466  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-25 17:00:33,569  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:14525
+2018-01-25 17:00:34,216  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:14528
+2018-01-25 17:00:34,217  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:14529
+2018-01-25 17:01:01,642  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:14595
+2018-01-25 17:01:04,527  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:14605
+2018-01-25 17:05:18,877  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.142:9000.
+2018-01-25 17:05:18,986  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11100, local endpoint:192.168.1.142:15149
+2018-01-25 17:05:19,049  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:15144
+2018-01-25 17:05:19,085  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:15150
+2018-01-25 17:05:19,172  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:15147
+2018-01-25 17:05:19,438  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:15148
+2018-01-25 17:05:19,666  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11101, local endpoint:192.168.1.142:15151
+2018-01-25 17:05:19,667  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.142:11103, local endpoint:192.168.1.142:15152
+2018-01-25 17:06:21,454  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:15292
+2018-01-25 17:06:21,696  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.142:15293
+2018-01-25 18:02:17,767  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.142:11100, socketError:ConnectionReset, reason:Socket receive error, ex:

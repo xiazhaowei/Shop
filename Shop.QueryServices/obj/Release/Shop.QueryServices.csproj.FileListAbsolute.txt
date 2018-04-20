@@ -1,0 +1,12 @@
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Shop.QueryServices.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Shop.QueryServices.pdb
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Shop.Common.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Xia.Common.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Newtonsoft.Json.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Shop.Common.pdb
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Xia.Common.pdb
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\bin\Release\Newtonsoft.Json.xml
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\obj\Release\Shop.QueryServices.csprojResolveAssemblyReference.cache
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\obj\Release\Shop.QueryServices.csproj.CoreCompileInputs.cache
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\obj\Release\Shop.QueryServices.dll
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.QueryServices\obj\Release\Shop.QueryServices.pdb

@@ -1,0 +1,6 @@
+2018-01-09 11:32:09,400  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.144:9000.
+2018-01-09 11:32:09,485  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.144:11100, local endpoint:192.168.1.144:4263
+2018-01-09 11:32:10,246  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.144:11101, local endpoint:192.168.1.144:4264
+2018-01-09 11:32:10,247  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.144:11103, local endpoint:192.168.1.144:4265
+2018-01-09 11:37:14,678  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.144:11101, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-09 11:37:14,678  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.144:11103, socketError:ConnectionReset, reason:Socket receive error, ex:

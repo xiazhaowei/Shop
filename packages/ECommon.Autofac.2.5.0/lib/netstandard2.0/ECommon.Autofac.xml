@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommon.Autofac</name>
+    </assembly>
+    <members>
+        <member name="T:ECommon.Autofac.AutofacObjectContainer">
+            <summary>Autofac implementation of IObjectContainer.
+            </summary>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.#ctor">
+            <summary>Default constructor.
+            </summary>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.#ctor(Autofac.ContainerBuilder)">
+            <summary>Parameterized constructor.
+            </summary>
+        </member>
+        <member name="P:ECommon.Autofac.AutofacObjectContainer.ContainerBuilder">
+            <summary>Represents the iner autofac container builder.
+            </summary>
+        </member>
+        <member name="P:ECommon.Autofac.AutofacObjectContainer.Container">
+            <summary>Represents the inner autofac container.
+            </summary>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.Build">
+            <summary>Build the container.
+            </summary>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.RegisterType(System.Type,System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementation type.
+            </summary>
+            <param name="implementationType">The implementation type.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.RegisterType(System.Type,System.Type,System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementer type as a service implementation.
+            </summary>
+            <param name="serviceType">The service type.</param>
+            <param name="implementationType">The implementation type.</param>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.Register``2(System.String,ECommon.Components.LifeStyle)">
+            <summary>Register a implementer type as a service implementation.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <typeparam name="TImplementer">The implementer type.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <param name="life">The life cycle of the implementer type.</param>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.RegisterInstance``2(``1,System.String)">
+            <summary>Register a implementer type instance as a service implementation.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <typeparam name="TImplementer">The implementer type.</typeparam>
+            <param name="instance">The implementer type instance.</param>
+            <param name="serviceName">The service name.</param>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.Resolve``1">
+            <summary>Resolve a service.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.Resolve(System.Type)">
+            <summary>Resolve a service.
+            </summary>
+            <param name="serviceType">The service type.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.TryResolve``1(``0@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <typeparam name="TService">The service type to resolve.</typeparam>
+            <param name="instance">The resulting component instance providing the service, or default(TService).</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.TryResolve(System.Type,System.Object@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <param name="serviceType">The service type to resolve.</param>
+            <param name="instance">The resulting component instance providing the service, or null.</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.ResolveNamed``1(System.String)">
+            <summary>Resolve a service.
+            </summary>
+            <typeparam name="TService">The service type.</typeparam>
+            <param name="serviceName">The service name.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.ResolveNamed(System.String,System.Type)">
+            <summary>Resolve a service.
+            </summary>
+            <param name="serviceName">The service name.</param>
+            <param name="serviceType">The service type.</param>
+            <returns>The component instance that provides the service.</returns>
+        </member>
+        <member name="M:ECommon.Autofac.AutofacObjectContainer.TryResolveNamed(System.String,System.Type,System.Object@)">
+            <summary>Try to retrieve a service from the container.
+            </summary>
+            <param name="serviceName">The name of the service to resolve.</param>
+            <param name="serviceType">The type of the service to resolve.</param>
+            <param name="instance">The resulting component instance providing the service, or null.</param>
+            <returns>True if a component providing the service is available.</returns>
+        </member>
+        <member name="T:ECommon.Configurations.ConfigurationExtensions">
+            <summary>ENode configuration class Autofac extensions.
+            </summary>
+        </member>
+        <member name="M:ECommon.Configurations.ConfigurationExtensions.UseAutofac(ECommon.Configurations.Configuration)">
+            <summary>Use Autofac as the object container.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ECommon.Configurations.ConfigurationExtensions.UseAutofac(ECommon.Configurations.Configuration,Autofac.ContainerBuilder)">
+            <summary>Use Autofac as the object container.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

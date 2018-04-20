@@ -1,0 +1,20 @@
+2017-12-25 18:42:19,165  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 18:55:11,731  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 19:04:23,333  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 20:49:16,651  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 20:57:27,310  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 21:04:50,260  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 21:11:51,079  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 21:41:45,386  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:06:48,237  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:12:18,188  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:14:08,069  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:17:27,714  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:21:43,380  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:26:01,263  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:31:20,758  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:32:51,668  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:33:01,955  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 22:36:56,404  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 23:54:05,213  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9001
+2017-12-25 23:59:43,691  INFO ENode.EQueue.SendQueueMessageService - ENode message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:7f0000015d2b0000d76d000000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:7, Tag:Shop.Commands.Users.EditUserCommand, CreatedTime:2017/12/25 23:59:43, StoredTime:2017/12/25 23:59:43],ErrorMessage:], routingKey: bc940e08-3f6b-4081-b441-015e497f018e, messageId: 5a41206faa13b746bc285a7d, version: 

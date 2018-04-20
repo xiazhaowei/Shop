@@ -1,0 +1,24 @@
+2017-12-30 10:21:21,734  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:0
+2017-12-30 10:22:45,908  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:0
+2017-12-30 10:26:08,731  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 10:34:48,861  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 10:43:03,828  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 11:40:27,472  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 11:45:19,380  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 11:56:03,600  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:08:08,856  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:13:18,376  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:28:22,876  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:32:28,275  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:38:54,650  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:43:45,843  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:51:57,670  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 12:56:54,778  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 13:04:43,045  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 13:07:51,141  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 13:15:17,223  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 127.0.0.1:9000
+2017-12-30 13:21:20,036  INFO ENode.EQueue.SendQueueMessageService - ENode message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:7f0000015d2b00005ac0000000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:9, Tag:Shop.Commands.Wallets.SetAccessCodeCommand, CreatedTime:2017/12/30 13:21:19, StoredTime:2017/12/30 13:21:19],ErrorMessage:], routingKey: 6626f898-37e7-4c0a-aa61-8bb1c5a564ce, messageId: 5a47224faa13b721e8248857, version: 
+2017-12-30 13:22:14,050  INFO ENode.EQueue.SendQueueMessageService - ENode message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:7f0000015d2b0000f8c1000000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:10, Tag:Shop.Commands.Wallets.SetAccessCodeCommand, CreatedTime:2017/12/30 13:22:13, StoredTime:2017/12/30 13:22:13],ErrorMessage:], routingKey: 6626f898-37e7-4c0a-aa61-8bb1c5a564ce, messageId: 5a472285aa13b721e82488a6, version: 
+2017-12-30 13:22:49,047  INFO ENode.EQueue.SendQueueMessageService - ENode message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:7f0000015d2b000096c3000000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:11, Tag:Shop.Commands.Wallets.BankCards.AddBankCardCommand, CreatedTime:2017/12/30 13:22:49, StoredTime:2017/12/30 13:22:49],ErrorMessage:], routingKey: 6626f898-37e7-4c0a-aa61-8bb1c5a564ce, messageId: 5a4722a9aa13b721e82488d8, version: 
+2017-12-30 13:23:52,271  INFO ENode.EQueue.SendQueueMessageService - ENode message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:7f0000015d2b0000e9dd000000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:14, Tag:Shop.Commands.Wallets.SetAccessCodeCommand, CreatedTime:2017/12/30 13:23:52, StoredTime:2017/12/30 13:23:52],ErrorMessage:], routingKey: 6626f898-37e7-4c0a-aa61-8bb1c5a564ce, messageId: 5a4722e8aa13b721e8248930, version: 
+2017-12-30 13:24:10,574  INFO ENode.EQueue.SendQueueMessageService - ENode message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:7f0000015d2b0000d3e9000000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:16, Tag:Shop.Commands.Users.UpdateNickNameCommand, CreatedTime:2017/12/30 13:24:10, StoredTime:2017/12/30 13:24:10],ErrorMessage:], routingKey: 385a712f-f126-4116-8391-015e28199082, messageId: 5a4722faaa13b721e824894d, version: 

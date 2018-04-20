@@ -1,0 +1,7 @@
+2017-09-10 11:39:28,199  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-09-10 11:41:27,008  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018e5d2b0000f9b9040000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:41, Tag:Shop.Commands.Orders.PlaceOrderCommand, CreatedTime:2017/9/10 11:41:26, StoredTime:2017/9/10 11:41:26],ErrorMessage:], routingKey: 71d19b55-cc82-46e3-9cde-015e6b9824db
+2017-09-10 11:41:29,728  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018e5d2b0000e0d3040000000000, Code:1, Topic:ShopCommandTopic, QueueId:1, QueueOffset:95, Tag:Shop.Commands.Payments.CreatePaymentCommand, CreatedTime:2017/9/10 11:41:29, StoredTime:2017/9/10 11:41:29],ErrorMessage:], routingKey: bd77e02f-6e28-4ef4-9561-015e6b9830da
+2017-09-10 11:44:24,572  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-09-10 11:48:10,583  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-09-10 11:52:39,119  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-09-10 17:37:08,997  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002

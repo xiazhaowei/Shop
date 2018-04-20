@@ -1,0 +1,80 @@
+2017-09-08 10:57:43,839  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.101:9002.
+2017-09-08 10:57:43,912  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11100, local endpoint:192.168.1.101:57669
+2017-09-08 10:57:44,571  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11101, local endpoint:192.168.1.101:57670
+2017-09-08 10:57:44,572  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11103, local endpoint:192.168.1.101:57671
+2017-09-08 11:01:49,779  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.101:9002.
+2017-09-08 11:01:49,860  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11100, local endpoint:192.168.1.101:58039
+2017-09-08 11:01:50,290  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11101, local endpoint:192.168.1.101:58040
+2017-09-08 11:01:50,292  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11103, local endpoint:192.168.1.101:58041
+2017-09-08 11:03:09,356  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.101:58192
+2017-09-08 11:03:09,624  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.101:58193
+2017-09-08 11:45:11,890  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.101:9002.
+2017-09-08 11:45:11,955  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11100, local endpoint:192.168.1.101:62267
+2017-09-08 11:45:12,446  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11101, local endpoint:192.168.1.101:62268
+2017-09-08 11:45:12,447  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11103, local endpoint:192.168.1.101:62269
+2017-09-08 13:28:13,353  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.101:11101 socketError:Success, reason:Socket normal close., ex:
+2017-09-08 13:28:13,357  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.101:11103 socketError:Success, reason:Socket normal close., ex:
+2017-09-08 13:28:18,392  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11101, local endpoint:192.168.1.101:4109
+2017-09-08 13:28:18,394  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11103, local endpoint:192.168.1.101:4110
+2017-09-08 15:00:38,988  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.101:11101 socketError:Success, reason:Socket normal close., ex:
+2017-09-08 15:00:38,988  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.101:11103 socketError:Success, reason:Socket normal close., ex:
+2017-09-08 15:00:44,475  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11101, local endpoint:192.168.1.101:6119
+2017-09-08 15:00:44,476  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.101:11103, local endpoint:192.168.1.101:6120
+2017-09-08 15:07:24,466  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.101:11103 socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-09-08 15:07:24,466  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.101:11101 socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-09-08 15:07:24,469  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.101:11100 socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-09-08 20:56:43,454  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 192.168.1.102:9002.
+2017-09-08 20:56:43,536  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11100, local endpoint:192.168.1.102:4727
+2017-09-08 20:56:44,221  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11101, local endpoint:192.168.1.102:4730
+2017-09-08 20:56:44,222  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11103, local endpoint:192.168.1.102:4731
+2017-09-08 20:57:49,730  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.102:4846
+2017-09-08 20:57:50,128  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.102:4849
+2017-09-08 23:49:13,582  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11103 socketError:ConnectionAborted, reason:Socket receive error, ex:
+2017-09-08 23:49:13,583  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:4849 socketError:ConnectionAborted, reason:Socket receive error, ex:
+2017-09-08 23:49:17,424  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11100 socketError:ConnectionAborted, reason:Socket receive error, ex:
+2017-09-08 23:49:17,424  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11101 socketError:ConnectionAborted, reason:Socket receive error, ex:
+2017-09-08 23:49:13,587  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:4846 socketError:ConnectionAborted, reason:Socket receive error, ex:
+2017-09-08 23:49:17,466 ERROR ECommon.Scheduling.ScheduleService - Task has exception, name: RefreshBrokerAndTopicRouteInfo, due: 1000, period: 5000
+System.Exception: No available name server.
+   在 EQueue.Clients.ClientService.GetAvailableNameServerRemotingClient() 位置 D:\MyProjects\equeue\src\EQueue\Clients\ClientService.cs:行号 315
+   在 EQueue.Clients.ClientService.GetClusterBrokerList() 位置 D:\MyProjects\equeue\src\EQueue\Clients\ClientService.cs:行号 188
+   在 EQueue.Clients.ClientService.RefreshClusterBrokers() 位置 D:\MyProjects\equeue\src\EQueue\Clients\ClientService.cs:行号 228
+   在 EQueue.Clients.ClientService.<Start>b__17_0() 位置 D:\MyProjects\equeue\src\EQueue\Clients\ClientService.cs:行号 96
+   在 ECommon.Scheduling.ScheduleService.TaskCallback(Object obj) 位置 D:\MyProjects\ecommon\src\ECommon\Scheduling\ScheduleService.cs:行号 55
+2017-09-08 23:49:18,800  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.102:11100
+2017-09-08 23:49:18,801  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.102:11103
+2017-09-08 23:49:18,803 ERROR ECommon.Remoting.SocketRemotingClient - Reconnect to server error.
+System.Net.Sockets.SocketException (0x80004005): 在其上下文中，该请求的地址无效。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 ECommon.Socketing.ClientSocket.Start(Int32 waitMilliseconds) 位置 D:\MyProjects\ecommon\src\ECommon\Socketing\ClientSocket.cs:行号 73
+   在 ECommon.Remoting.SocketRemotingClient.ReconnectServer() 位置 D:\MyProjects\ecommon\src\ECommon\Remoting\SocketRemotingClient.cs:行号 238
+2017-09-08 23:49:18,808  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.102:11101
+2017-09-08 23:49:18,813 ERROR ECommon.Remoting.SocketRemotingClient - Reconnect to server error.
+System.Net.Sockets.SocketException (0x80004005): 在其上下文中，该请求的地址无效。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 ECommon.Socketing.ClientSocket.Start(Int32 waitMilliseconds) 位置 D:\MyProjects\ecommon\src\ECommon\Socketing\ClientSocket.cs:行号 73
+   在 ECommon.Remoting.SocketRemotingClient.ReconnectServer() 位置 D:\MyProjects\ecommon\src\ECommon\Remoting\SocketRemotingClient.cs:行号 238
+2017-09-08 23:49:18,803 ERROR ECommon.Remoting.SocketRemotingClient - Reconnect to server error.
+System.Net.Sockets.SocketException (0x80004005): 在其上下文中，该请求的地址无效。
+   在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 ECommon.Socketing.ClientSocket.Start(Int32 waitMilliseconds) 位置 D:\MyProjects\ecommon\src\ECommon\Socketing\ClientSocket.cs:行号 73
+   在 ECommon.Remoting.SocketRemotingClient.ReconnectServer() 位置 D:\MyProjects\ecommon\src\ECommon\Remoting\SocketRemotingClient.cs:行号 238
+2017-09-08 23:49:19,870  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.102:11100
+2017-09-08 23:49:19,964  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.102:11103
+2017-09-08 23:49:19,964  INFO ECommon.Remoting.SocketRemotingClient - Try to reconnect to server, address: 192.168.1.102:11101
+2017-09-08 23:49:20,072  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11103, local endpoint:192.168.1.102:4731
+2017-09-08 23:49:20,072  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11101, local endpoint:192.168.1.102:4730
+2017-09-08 23:49:20,073  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11100, local endpoint:192.168.1.102:4727
+2017-09-08 23:49:22,010  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.102:4846
+2017-09-08 23:49:22,019  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:192.168.1.102:4849
+2017-09-08 23:49:22,826  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11101 socketError:Success, reason:Socket normal close., ex:
+2017-09-08 23:49:22,827  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11103 socketError:Success, reason:Socket normal close., ex:
+2017-09-08 23:49:27,836  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11101, local endpoint:192.168.1.102:13788
+2017-09-08 23:49:27,837  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:192.168.1.102:11103, local endpoint:192.168.1.102:13789
+2017-09-08 23:50:45,478  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11103 socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-09-08 23:50:45,478  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11101 socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-09-08 23:50:45,747  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:4849 socketError:ConnectionReset, reason:Socket receive error, ex:
+2017-09-08 23:50:45,762  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:192.168.1.102:11100 socketError:ConnectionReset, reason:Socket receive error, ex:

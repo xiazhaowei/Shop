@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>五福商城</title>
+</head>
+<body>
+    <div style="text-align:center;">
+        如果浏览器没有跳转 <a href="@ViewData["ShopUrl"]">点击这里，进入商城</a>
+    </div>
+    <script>
+        window.location.href='@ViewData["ShopUrl"]';
+    </script>
+</body>
+</html>

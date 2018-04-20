@@ -1,0 +1,76 @@
+﻿@using Senparc.Weixin.Open.ComponentAPIs
+@{
+    ViewBag.Title = "公众号已成功授权";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var authInfo = ViewData["AuthorizationInfo"] as AuthorizationInfo;
+    var autherInfo = ViewData["AuthorizerInfo"] as AuthorizerInfo;
+
+    if (autherInfo == null)
+    {
+        throw new Exception("AuthorizerInfo is Null");
+    }
+}
+
+<section class="center-block pd-lg bg-black text-white text-center">
+    <h1>公众号已成功授权</h1>
+</section>
+
+<section class="pd">
+    <h2>授权信息</h2>
+    <div class="well">
+        <p style="word-break:break-all; white-space:normal">authorizer_access_token：@authInfo.authorizer_access_token</p>
+        <p>授权公众号appid：@authInfo.authorizer_appid</p>
+        <p>authorizer_refresh_token：@authInfo.authorizer_refresh_token</p>
+        <p>expires_in：@authInfo.expires_in</p>
+    </div>
+    <p>&nbsp;</p>
+    <div class="well">
+        权限信息：<br />
+        @if (authInfo.func_info != null)
+        {
+            foreach (var item in authInfo.func_info)
+            {
+                <span>&nbsp; &nbsp; @(item.funcscope_category != null ? item.funcscope_category.id.ToString() : "空（异常情况）")</span><br />
+            }
+        }
+        else
+        {
+            <span>空（异常情况）</span>
+        }
+    </div>
+</section>
+
+<section  class="pd">
+    <h2>授权公众号信息</h2>
+    <div class="well">
+        <p>
+            <img src="@autherInfo.head_img" style="width: 100px;" />
+            <img src="@autherInfo.qrcode_url" style="width: 100px;" />
+        </p>
+        <p>简称：@autherInfo.alias</p>
+        <p>名称：@autherInfo.nick_name</p>
+        <p>账号：@autherInfo.user_name</p>
+        <p>账号类型：@autherInfo.service_type_info.id</p>
+        <p>认证信息：@autherInfo.verify_type_info.id</p>
+    </div>
+</section>
+
+<section class="pd">
+    <h2>缓存信息</h2>
+    <p>
+        @Html.ActionLink("点击查看", "GetAuthorizerInfoResultPage", "OpenOAuth", new { authorizerAppId = authInfo.authorizer_appid }, new { target = "_blank" })<br />
+    </p>
+    <p>
+        @Html.ActionLink("刷新AuthorizerAccessToken", "RefreshAuthorizerAccessToken", "OpenOAuth", new { authorizerAppId = authInfo.authorizer_appid }, new { target = "_blank" })<br />
+    </p>
+</section>
+
+<section class="pd">
+    <h2>用户授权测试</h2>
+    <p>
+        @Html.ActionLink("用户授权测试", "Index", "Account", new { appId = authInfo.authorizer_appid }, null)<br />
+        注意：测试之前请先确认您的公众号有OAuth的权限，否则可能会返回错误：Scope 参数错误或没有 Scope 权限。
+    </p>
+</section>
+

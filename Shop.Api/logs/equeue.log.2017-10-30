@@ -1,0 +1,12 @@
+2017-10-30 15:16:36,043  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.4:11101,ConsumerAddress=192.168.1.4:11102,AdminAddress=192.168.1.4:11103]
+2017-10-30 15:16:36,043  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-30 15:16:36,044  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-30 15:30:18,121  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.4:11101,ConsumerAddress=192.168.1.4:11102,AdminAddress=192.168.1.4:11103]
+2017-10-30 15:30:18,122  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-30 15:30:18,122  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-30 15:33:38,231  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.4:11101,ConsumerAddress=192.168.1.4:11102,AdminAddress=192.168.1.4:11103]
+2017-10-30 15:33:38,232  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-30 15:33:38,232  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-10-30 16:12:22,300  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=ShopBroker,GroupName=ShopGroupName,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.4:11101,ConsumerAddress=192.168.1.4:11102,AdminAddress=192.168.1.4:11103]
+2017-10-30 16:12:22,300  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-10-30 16:12:22,301  INFO EQueue.Clients.Producers.Producer - Producer startted.

@@ -1,0 +1,3 @@
+2017-10-10 11:01:57,738  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002
+2017-10-10 11:04:30,937  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018e5d2b0000dbab0d0000000000, Code:1, Topic:ShopCommandTopic, QueueId:3, QueueOffset:146, Tag:Shop.Commands.Carts.RemoveCartGoodsCommand, CreatedTime:2017/10/10 11:04:30, StoredTime:2017/10/10 11:04:30],ErrorMessage:], routingKey: 296efcf9-f53d-4c8c-bc7f-5badd18c0bc7
+2017-10-10 17:14:17,788  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.142:9002

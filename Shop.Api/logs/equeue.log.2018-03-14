@@ -1,0 +1,15 @@
+2018-03-14 15:01:51,965  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.145:11101,ConsumerAddress=192.168.1.145:11102,AdminAddress=192.168.1.145:11103]
+2018-03-14 15:01:51,965  INFO EQueue.Clients.ClientService - ClientService startted.
+2018-03-14 15:01:51,965  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2018-03-14 15:19:33,441  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.145:11101,ConsumerAddress=192.168.1.145:11102,AdminAddress=192.168.1.145:11103]
+2018-03-14 15:19:33,441  INFO EQueue.Clients.ClientService - ClientService startted.
+2018-03-14 15:19:33,441  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2018-03-14 15:58:48,900  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.145:11101,ConsumerAddress=192.168.1.145:11102,AdminAddress=192.168.1.145:11103]
+2018-03-14 15:58:48,900  INFO EQueue.Clients.ClientService - ClientService startted.
+2018-03-14 15:58:48,900  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2018-03-14 16:12:59,231  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.145:11101,ConsumerAddress=192.168.1.145:11102,AdminAddress=192.168.1.145:11103]
+2018-03-14 16:12:59,231  INFO EQueue.Clients.ClientService - ClientService startted.
+2018-03-14 16:12:59,231  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2018-03-14 16:37:20,478  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=192.168.1.145:11101,ConsumerAddress=192.168.1.145:11102,AdminAddress=192.168.1.145:11103]
+2018-03-14 16:37:20,479  INFO EQueue.Clients.ClientService - ClientService startted.
+2018-03-14 16:37:20,479  INFO EQueue.Clients.Producers.Producer - Producer startted.

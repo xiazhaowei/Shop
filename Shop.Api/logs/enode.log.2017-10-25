@@ -1,0 +1,17 @@
+2017-10-25 09:11:34,771  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.143:9002
+2017-10-25 10:44:38,347  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.143:9002
+2017-10-25 11:01:36,521 ERROR ENode.EQueue.SendQueueMessageService - EQueue message async send has exception, message: [Topic=ShopCommandTopic,Code=1,Tag=Shop.Commands.OfflineStores.CreateOfflineStoreCommand,CreatedTime=2017/10/25 11:01:35,BodyLength=556], routingKey: ff79ebd5-0a29-485e-95ce-015f5331d514
+System.Exception: No available message queue for topic [ShopCommandTopic]
+   在 EQueue.Clients.Producers.Producer.<SendAsync>d__22.MoveNext() 位置 D:\MyProjects\equeue\src\EQueue\Clients\Producers\Producer.cs:行号 114
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 ENode.EQueue.SendQueueMessageService.<SendMessageAsync>d__4.MoveNext() 位置 D:\MyProjects\enode\src\eNode\EQueue\SendQueueMessageService.cs:行号 47
+2017-10-25 11:06:10,963  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018f5d2b00009ed1130000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:297, Tag:Shop.Commands.OfflineStores.CreateOfflineStoreCommand, CreatedTime:2017/10/25 11:06:10, StoredTime:2017/10/25 11:06:10],ErrorMessage:], routingKey: 20b2fade-3d13-43b9-a77d-015f533607fe
+2017-10-25 11:13:23,941  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.143:9002
+2017-10-25 11:31:51,974  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018f5d2b0000d4d8130000000000, Code:1, Topic:ShopCommandTopic, QueueId:0, QueueOffset:92, Tag:Shop.Commands.OfflineStores.CreateOfflineStoreCommand, CreatedTime:2017/10/25 11:31:51, StoredTime:2017/10/25 11:31:51],ErrorMessage:], routingKey: 96d3816f-35d1-477f-bb04-015f534d8b65
+2017-10-25 11:42:32,215  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018f5d2b000007e0130000000000, Code:1, Topic:ShopCommandTopic, QueueId:0, QueueOffset:93, Tag:Shop.Commands.OfflineStores.UpdateOfflineStoreCommand, CreatedTime:2017/10/25 11:42:32, StoredTime:2017/10/25 11:42:32],ErrorMessage:], routingKey: 96d3816f-35d1-477f-bb04-015f534d8b65
+2017-10-25 11:44:05,765  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018f5d2b0000f4e6130000000000, Code:1, Topic:ShopCommandTopic, QueueId:0, QueueOffset:94, Tag:Shop.Commands.OfflineStores.UpdateOfflineStoreCommand, CreatedTime:2017/10/25 11:44:05, StoredTime:2017/10/25 11:44:05],ErrorMessage:], routingKey: 96d3816f-35d1-477f-bb04-015f534d8b65
+2017-10-25 17:14:33,725  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.143:9002
+2017-10-25 17:26:19,902  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.143:9002
+2017-10-25 19:34:45,775  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.9:9002

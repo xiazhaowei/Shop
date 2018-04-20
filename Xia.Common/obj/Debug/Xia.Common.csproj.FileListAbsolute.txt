@@ -1,0 +1,9 @@
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\bin\Debug\Xia.Common.dll
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\bin\Debug\Xia.Common.pdb
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\obj\Debug\Xia.Common.csprojResolveAssemblyReference.cache
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\obj\Debug\Xia.Common.Properties.Resources.resources
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\obj\Debug\Xia.Common.csproj.GenerateResource.Cache
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\obj\Debug\Xia.Common.dll
+C:\Users\xiazhaowei\OneDrive\悟行工作文件\Shop\Xia.Common\obj\Debug\Xia.Common.pdb

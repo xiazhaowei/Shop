@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Oauth2.0授权测试";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pd-lg bg-black text-white text-center">
+    <h2>开放平台OAuth2.0授权测试</h2>
+</div>
+
+<div class="pd">
+    <p>注意：此页面仅供测试，使用自己的appid、Component_Appid及Component_AccessToken等参数。</p>
+    <p><a href="@ViewData["UrlUserInfo"]">测试snsapi_userinfo</a></p>
+    <p>
+        将要链接到的地址：<br />
+        <textarea rows="10" cols="40">@ViewData["UrlUserInfo"]</textarea>
+    </p>
+</div>

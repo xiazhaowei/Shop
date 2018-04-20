@@ -1,0 +1,3 @@
+2017-09-28 14:34:52,269  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.143:9002
+2017-09-28 17:30:09,906  INFO ENode.EQueue.CommandResultProcessor - Command result processor started, bindingAddress: 192.168.1.143:9002
+2017-09-28 17:57:12,992  INFO ENode.EQueue.SendQueueMessageService - EQueue message async send success, sendResult: [SendStatus:Success,MessageStoreResult:[MessageId:c0a8018f5d2b0000fa8a0c0000000000, Code:1, Topic:ShopCommandTopic, QueueId:2, QueueOffset:187, Tag:Shop.Commands.Stores.StoreOrders.DeliverCommand, CreatedTime:2017/9/28 17:57:12, StoredTime:2017/9/28 17:57:12],ErrorMessage:], routingKey: 749e5f92-a3fe-4f9b-b4bd-015e97339048

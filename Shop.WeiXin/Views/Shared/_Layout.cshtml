@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/csses")
+    @RenderSection("Header", false)
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/jses")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

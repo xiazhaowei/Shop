@@ -1,0 +1,23 @@
+2018-01-03 22:39:33,336  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2018-01-03 22:39:33,456  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:6800
+2018-01-03 22:39:34,605  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:6803
+2018-01-03 22:39:34,605  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:6804
+2018-01-03 22:40:19,023  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:6840
+2018-01-03 22:40:20,882  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:6841
+2018-01-03 22:40:20,886  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:6842
+2018-01-03 22:41:07,204  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:11100, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-03 22:41:07,218  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:6841, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-03 22:41:07,218  INFO ECommon.Socketing.TcpConnection - Socket closed, remote endpoint:127.0.0.1:6842, socketError:ConnectionReset, reason:Socket receive error, ex:
+2018-01-03 22:45:41,050  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2018-01-03 22:45:41,130  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:7039
+2018-01-03 22:45:41,955  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:7040
+2018-01-03 22:45:41,959  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:7041
+2018-01-03 22:46:28,465  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7073
+2018-01-03 22:46:30,286  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7075
+2018-01-03 22:46:30,286  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7074
+2018-01-03 22:50:46,405  INFO ECommon.Socketing.ServerSocket - Socket server is starting, listening on TCP endpoint: 127.0.0.1:9001.
+2018-01-03 22:50:46,501  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11100, local endpoint:127.0.0.1:7237
+2018-01-03 22:50:47,162  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11101, local endpoint:127.0.0.1:7240
+2018-01-03 22:50:47,162  INFO ECommon.Socketing.ClientSocket - Socket connected, remote endpoint:127.0.0.1:11103, local endpoint:127.0.0.1:7241
+2018-01-03 22:51:12,100  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7259
+2018-01-03 22:51:13,698  INFO ECommon.Socketing.ServerSocket - Socket accepted, remote endpoint:127.0.0.1:7260

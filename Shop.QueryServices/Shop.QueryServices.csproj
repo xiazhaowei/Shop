@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E373541C-70EE-4330-A7CF-712280FB51E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shop.QueryServices</RootNamespace>
+    <AssemblyName>Shop.QueryServices</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dtos\Admin.cs" />
+    <Compile Include="Dtos\Announcement.cs" />
+    <Compile Include="Dtos\BankCard.cs" />
+    <Compile Include="Dtos\BenevolenceIndex.cs" />
+    <Compile Include="Dtos\BenevolenceTransfer.cs" />
+    <Compile Include="Dtos\Cart.cs" />
+    <Compile Include="Dtos\CartGoods.cs" />
+    <Compile Include="Dtos\CashTransfer.cs" />
+    <Compile Include="Dtos\Category.cs" />
+    <Compile Include="Dtos\Comment.cs" />
+    <Compile Include="Dtos\ExpressAddress.cs" />
+    <Compile Include="Dtos\Goods.cs" />
+    <Compile Include="Dtos\GoodsAlias.cs" />
+    <Compile Include="Dtos\GoodsBlock.cs" />
+    <Compile Include="Dtos\GoodsBlockGoods.cs" />
+    <Compile Include="Dtos\GoodsBlockWarp.cs" />
+    <Compile Include="Dtos\GoodsBlockWarpAlis.cs" />
+    <Compile Include="Dtos\GoodsBlockWarpGoodBlock.cs" />
+    <Compile Include="Dtos\GoodsDetails.cs" />
+    <Compile Include="Dtos\GoodsParam.cs" />
+    <Compile Include="Dtos\IncentiveInfo.cs" />
+    <Compile Include="Dtos\Notification.cs" />
+    <Compile Include="Dtos\OfflineStore.cs" />
+    <Compile Include="Dtos\OperatRecord.cs" />
+    <Compile Include="Dtos\Order.cs" />
+    <Compile Include="Dtos\OrderAlis.cs" />
+    <Compile Include="Dtos\OrderGoods.cs" />
+    <Compile Include="Dtos\OrderGoodsAlis.cs" />
+    <Compile Include="Dtos\OrderLine.cs" />
+    <Compile Include="Dtos\Partner.cs" />
+    <Compile Include="Dtos\Payment.cs" />
+    <Compile Include="Dtos\PubCategory.cs" />
+    <Compile Include="Dtos\RechargeApply.cs" />
+    <Compile Include="Dtos\SectionAndStatistic.cs" />
+    <Compile Include="Dtos\SectionInfo.cs" />
+    <Compile Include="Dtos\ShopCashTransfer.cs" />
+    <Compile Include="Dtos\Specification.cs" />
+    <Compile Include="Dtos\SpecificationName.cs" />
+    <Compile Include="Dtos\Store.cs" />
+    <Compile Include="Dtos\StoreOrder.cs" />
+    <Compile Include="Dtos\StoreOrderAlis.cs" />
+    <Compile Include="Dtos\StoreOrderDetails.cs" />
+    <Compile Include="Dtos\StoreOrderWithInfo.cs" />
+    <Compile Include="Dtos\ThirdCurrency.cs" />
+    <Compile Include="Dtos\ThirdCurrencyImportLog.cs" />
+    <Compile Include="Dtos\User.cs" />
+    <Compile Include="Dtos\UserAlis.cs" />
+    <Compile Include="Dtos\UserGift.cs" />
+    <Compile Include="Dtos\Wallet.cs" />
+    <Compile Include="Dtos\WalletAlis.cs" />
+    <Compile Include="Dtos\WithdrawApply.cs" />
+    <Compile Include="IAdminQueryService.cs" />
+    <Compile Include="IAnnouncementQueryService.cs" />
+    <Compile Include="IBenevolenceIndexQueryService.cs" />
+    <Compile Include="ICartQueryService.cs" />
+    <Compile Include="ICategoryQueryService.cs" />
+    <Compile Include="ICommentQueryService.cs" />
+    <Compile Include="IGoodsBlockQueryService.cs" />
+    <Compile Include="IGoodsBlockWarpQueryService.cs" />
+    <Compile Include="IGoodsQueryService.cs" />
+    <Compile Include="IGranteeQueryService.cs" />
+    <Compile Include="INotificationQueryService.cs" />
+    <Compile Include="IOfflineStoreQueryService.cs" />
+    <Compile Include="IOrderGoodsQueryService.cs" />
+    <Compile Include="IOrderQueryService.cs" />
+    <Compile Include="IPartnerQueryService.cs" />
+    <Compile Include="IPaymentQueryService.cs" />
+    <Compile Include="IPubCategoryQueryService.cs" />
+    <Compile Include="ISectionQueryService.cs" />
+    <Compile Include="IStoreOrderQueryService.cs" />
+    <Compile Include="IStoreQueryService.cs" />
+    <Compile Include="IThirdCurrencyQueryService.cs" />
+    <Compile Include="IUserQueryService.cs" />
+    <Compile Include="IWalletQueryService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.Common\Shop.Common.csproj">
+      <Project>{890eac5d-4afc-4ad5-b8ae-246e73d111ad}</Project>
+      <Name>Shop.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

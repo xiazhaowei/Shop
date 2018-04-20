@@ -1,0 +1,16 @@
+﻿@using Shop.WeiXin.Models
+@{
+    ViewBag.Title = "邀请卡";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userInfo = ViewData["UserInfo"] as UserInfo;
+}
+<div class="bg-black pd-lg">
+    <div class="bg-white text-center pd-md bd" style="padding-top:10px">
+        <p><img class="img-circle" width="15" src="@userInfo.Portrait" /> @userInfo.NickName 邀请您加入五福商城</p>
+        <h3>消费？赚钱？</h3>
+        <img class="img-responsive" src="@ViewData["QrCodeUrl"]" />
+        <p>长按识别二维码参与</p>
+        <h4>成为五福商城的消费者，就是成为新时代全新的消费商，消费还能赚收益，快来看看怎么玩</h4>
+    </div>
+</div>
+

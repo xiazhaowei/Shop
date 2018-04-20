@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ENode.SqlServer</name>
+    </assembly>
+    <members>
+        <member name="M:ENode.SqlServer.ENodeExtensions.UseSqlServerEventStore(ENode.Configurations.ENodeConfiguration)">
+            <summary>Use the SqlServerEventStore as the IEventStore.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.SqlServer.ENodeExtensions.UseSqlServerPublishedVersionStore(ENode.Configurations.ENodeConfiguration)">
+            <summary>Use the SqlServerPublishedVersionStore as the IPublishedVersionStore.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.SqlServer.ENodeExtensions.UseSqlServerLockService(ENode.Configurations.ENodeConfiguration)">
+            <summary>Use the SqlServerLockService as the ILockService.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.SqlServer.ENodeExtensions.InitializeSqlServerEventStore(ENode.Configurations.ENodeConfiguration,ENode.SqlServer.OptionSetting)">
+            <summary>Initialize the SqlServerEventStore with option setting.
+            </summary>
+            <param name="optionSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.SqlServer.ENodeExtensions.InitializeSqlServerPublishedVersionStore(ENode.Configurations.ENodeConfiguration,ENode.SqlServer.OptionSetting)">
+            <summary>Initialize the SqlServerPublishedVersionStore with option setting.
+            </summary>
+            <param name="optionSetting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ENode.SqlServer.ENodeExtensions.InitializeSqlServerLockService(ENode.Configurations.ENodeConfiguration,ENode.SqlServer.OptionSetting)">
+            <summary>Initialize the SqlServerLockService with option setting.
+            </summary>
+            <param name="optionSetting"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

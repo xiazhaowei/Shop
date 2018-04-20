@@ -1,0 +1,15 @@
+2017-12-29 17:22:20,480  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=127.0.0.1:11101,ConsumerAddress=127.0.0.1:11102,AdminAddress=127.0.0.1:11103]
+2017-12-29 17:22:20,481  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-12-29 17:22:20,481  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-12-29 18:15:08,308  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=127.0.0.1:11101,ConsumerAddress=127.0.0.1:11102,AdminAddress=127.0.0.1:11103]
+2017-12-29 18:15:08,308  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-12-29 18:15:08,308  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-12-29 18:21:23,406  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=127.0.0.1:11101,ConsumerAddress=127.0.0.1:11102,AdminAddress=127.0.0.1:11103]
+2017-12-29 18:21:23,407  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-12-29 18:21:23,407  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-12-29 18:30:32,142  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=127.0.0.1:11101,ConsumerAddress=127.0.0.1:11102,AdminAddress=127.0.0.1:11103]
+2017-12-29 18:30:32,143  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-12-29 18:30:32,143  INFO EQueue.Clients.Producers.Producer - Producer startted.
+2017-12-29 18:58:41,741  INFO EQueue.Clients.ClientService - Added broker: [BrokerName=DefaultBroker,GroupName=DefaultGroup,ClusterName=DefaultCluster,BrokerRole=0,ProducerAddress=127.0.0.1:11101,ConsumerAddress=127.0.0.1:11102,AdminAddress=127.0.0.1:11103]
+2017-12-29 18:58:41,741  INFO EQueue.Clients.ClientService - ClientService startted.
+2017-12-29 18:58:41,741  INFO EQueue.Clients.Producers.Producer - Producer startted.

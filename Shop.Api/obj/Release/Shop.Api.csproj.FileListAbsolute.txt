@@ -1,0 +1,2 @@
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Api\obj\Release\Shop.Api.csprojResolveAssemblyReference.cache
+C:\Users\xiazhaowei\OneDrive\悟行文化\Shop\Shop.Api\obj\Release\Shop.Api.csproj.CoreCompileInputs.cache
